@@ -5,11 +5,22 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Trois 2V</title>
+	<!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="./view/style/style.css">
 </head>
 <body>
-	
-    <script src="./frameworks/three.js"></script>
+	<section class="page_container">
+		<div class="titre_container">
+			<h1>Date</h1>
+		</div>
+		<div class="nuage_container">
+			<button class="button_point"></button>
+		</div>
+		<div class="bar_container">
+			<input type="range" id="time_bar" name="time" min="0" max="5">
+		</div>
+	</section>	
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="./view/script/app.js"></script>
 </body>
 </html>

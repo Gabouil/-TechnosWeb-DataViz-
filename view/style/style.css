@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+@font-face {
+	font-family: "typerighter";
+	src: url("../ressources/rm_typerighter.ttf");
+}
+body{
+    background-size: 100%;
+    background:#E2E0D9;
+    font-family: "typerighter", Poppins, Roboto, Oxygen, sans-serif;
+    color: black;
+}
+
+.page_container {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 0.2fr;
+    grid-template-rows: 0.2fr 1fr 0.2fr;
+    grid-template-areas: 
+    ". titre ."
+    ". nuage ."
+    ". bar ."
+    ;
+}
+
+.titre_container {
+    grid-area: titre;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nuage_container {
+    position: relative;
+    grid-area: nuage;
+    border: solid 2px;
+    border-radius: 15px;
+    height: 500px;
+    width: 100%;
+}
+
+.button_point {
+    position: absolute;
+    bottom: 15%;
+    left: 80%;
+    transition: 1s;
+    background: white;
+    border: solid 1px black;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+.button_point:hover {
+    background: #E2E0D9;
+}
+
+.bar_container {
+    grid-area: bar;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#time_bar {
+    width: 100%;
+    
+}
+
+input[type=range]#time_bar {
+    -webkit-appearance: none;
+    height: 1px;
+    font: inherit;
+    outline: none;
+    background: black;
+    box-sizing: border-box;
+    transition: opacity .2s;
+    cursor: pointer;
+    color: black;
+  }
+input[type=range]#time_bar::-webkit-slider-thumb {
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 100%;
+    background-color: white;
+  }
+  input[type=range]#time_bar::-moz-range-thumb {
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 100%;
+    background-color: white;
+  }
+  input[type=range]#time_bar::-ms-thumb {
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 100%;
+    background-color: white;
+  }
