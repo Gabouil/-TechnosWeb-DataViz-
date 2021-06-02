@@ -8,7 +8,7 @@ a {
 }
 @font-face {
 	font-family: "typerighter";
-	src: url("../ressources/rm_typerighter.ttf");
+	src: url("../ressources/rm_typerighter.woff");
 }
 body{
     background-size: 100%;
@@ -33,12 +33,12 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 40px;
 }
 
 .nuage_container {
     position: relative;
     grid-area: nuage;
-    border: solid 2px;
     border-radius: 15px;
     height: 500px;
     width: 100%;
@@ -46,8 +46,6 @@ body{
 
 .button_point {
     position: absolute;
-    bottom: 15%;
-    left: 80%;
     transition: 1s;
     background: white;
     border: solid 1px black;
@@ -58,6 +56,15 @@ body{
 }
 .button_point:hover {
     background: #E2E0D9;
+}
+
+#JS {
+    bottom: 15%;
+    left: 20%;
+}
+#HTML {
+    bottom: 50%;
+    left: 30%;
 }
 
 .bar_container {
