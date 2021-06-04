@@ -11,20 +11,216 @@
 <body>
 	<section id="mon_app" class="page_container">
 		<div class="titre_container">
-			<h1>Date</h1>
+			<h1>Explosion du web</h1>
 		</div>
 		<div class="nuage_container">
-			<butto class="button_point" id="JS" :style="JS"></button>
-		</div>
-		<div class="nuage_container">
-			<butto class="button_point" id="HTML" :style="HTML"></button>
+			<span class="popularite">
+				<p class="titre_popularite">Popularité</p>
+				<span class="popularite_fleche"></span>
+			</span>
+			<span class="croissance">
+				<p class="titre_croissance">Croissance</p>
+				<span class="croissance_fleche"></span>
+			</span>
+			<!-- langage -->
+			<!-- front -->
+			<div class="point_container" id="css" :style="css">
+				<button class="button_point" ></button>
+				<p class="titre">CSS</p>
+			</div>
+			<div class="point_container" id="c" :style="c">
+				<button class="button_point"></button>
+				<p class="titre">C</p>
+			</div>
+			<div class="point_container" id="cpp" :style="cpp">
+				<button class="button_point"></button>
+				<p class="titre">C++</p>
+			</div>
+			<!-- back -->
+			<div class="point_container" id="python" :style="python">
+				<button class="button_point"></button>
+				<p class="titre">Python</p>
+			</div>
+			<div class="point_container" id="php" :style="php">
+				<button class="button_point"></button>
+				<p class="titre">PHP</p>
+			</div>
+			<div class="point_container" id="java" :style="java">
+				<button class="button_point"></button>
+				<p class="titre">Java</p>
+			</div>
+			<div class="point_container" id="ruby" :style="ruby">
+				<button class="button_point"></button>
+				<p class="titre">Ruby</p>
+			</div>
+			<div class="point_container" id="SQL" :style="SQL">
+				<button class="button_point"></button>
+				<p class="titre">SQL</p>
+			</div>
+			<div class="point_container" id="csh" :style="csh">
+				<button class="button_point"></button>
+				<p class="titre">C#</p>
+			</div>
+			<!-- front/back -->
+			<div class="point_container" id="javaScript" :style="javaScript">
+				<button class="button_point"></button>
+				<p class="titre">JavaScript</p>
+			</div>
+			<div class="point_container" id="typescript" :style="typescript">
+				<button class="button_point"></button>
+				<p class="titre">Type Script</p>
+			</div>
+			<div class="point_container" id="objectc" :style="objectc">
+				<button class="button_point"></button>
+				<p class="titre">Object-C</p>
+			</div>
+			<div class="point_container" id="kotlin" :style="kotlin">
+				<button class="button_point"></button>
+				<p class="titre">Kotlin</p>
+			</div>
+			<!-- Framework -->
+			<!-- front -->
+			<div class="point_container" id="reactjs" :style="reactjs">
+				<button class="button_point"></button>
+				<p class="titre">React.js</p>
+			</div>
+			<div class="point_container" id="reactNatif" :style="reactNatif">
+				<button class="button_point"></button>
+				<p class="titre">React Natif</p>
+			</div>
+			<div class="point_container" id="angularJS" :style="angularJS">
+				<button class="button_point"></button>
+				<p class="titre">Angular JS</p>
+			</div>
+			<div class="point_container" id="angular" :style="angular">
+				<button class="button_point"></button>
+				<p class="titre">Angular</p>
+			</div>
+			<div class="point_container" id="vue" :style="vue">
+				<button class="button_point"></button>
+				<p class="titre">Vue</p>
+			</div>
+			<div class="point_container" id="bootstrap" :style="bootstrap">
+				<button class="button_point"></button>
+				<p class="titre">Bootstrap</p>
+			</div>
+			<div class="point_container" id="tailwind" :style="tailwind">
+				<button class="button_point"></button>
+				<p class="titre">Tailwind</p>
+			</div>
+			<!-- back -->
+			<div class="point_container" id="laraval" :style="laraval">
+				<button class="button_point"></button>
+				<p class="titre">Laraval</p>
+			</div>
+			<div class="point_container" id="symphony" :style="symphony">
+				<button class="button_point"></button>
+				<p class="titre">Symphony</p>
+			</div>
+			<div class="point_container" id="rails" :style="rails">
+				<button class="button_point"></button>
+				<p class="titre">Rails</p>
+			</div>
+			<div class="point_container" id="django" :style="django">
+				<button class="button_point"></button>
+				<p class="titre">Django</p>
+			</div>
+			<div class="point_container" id="cakePHP" :style="cakePHP">
+				<button class="button_point"></button>
+				<p class="titre">CakePHP</p>
+			</div>
+			<!-- front/back -->
+			<div class="point_container" id="net" :style="net">
+				<button class="button_point"></button>
+				<p class="titre">.Net</p>
+			</div>
+			<!-- Serveur -->
+			<div class="point_container" id="apache" :style="apache">
+				<button class="button_point"></button>
+				<p class="titre">Apache</p>
+			</div>
+			<div class="point_container" id="nginx" :style="nginx">
+				<button class="button_point"></button>
+				<p class="titre">Nginx</p>
+			</div>
+			<div class="point_container" id="iis" :style="iis">
+				<button class="button_point"></button>
+				<p class="titre">IIS</p>
+			</div>
+			<!-- BDD -->
+			<div class="point_container" id="mySQL" :style="mySQL">
+				<button class="button_point"></button>
+				<p class="titre">mySQL</p>
+			</div>
+			<div class="point_container" id="mongodb" :style="mongodb">
+				<button class="button_point"></button>
+				<p class="titre">Mongodb</p>
+			</div>
+			<div class="point_container" id="SQLServer" :style="SQLServer">
+				<button class="button_point"></button>
+				<p class="titre">SQLServer</p>
+			</div>
+			<div class="point_container" id="postgreSQL" :style="postgreSQL">
+				<button class="button_point"></button>
+				<p class="titre">PostgreSQL</p>
+			</div>
+			<div class="point_container" id="oracle" :style="oracle">
+				<button class="button_point"></button>
+				<p class="titre">Oracle</p>
+			</div>
+			<!-- Outils -->
+			<div class="point_container" id="adobeFlash" :style="adobeFlash">
+				<button class="button_point"></button>
+				<p class="titre">Adobe Flash</p>
+			</div>
+			<div class="point_container" id="wordpress" :style="wordpress">
+				<button class="button_point"></button>
+				<p class="titre">Wordpress</p>
+			</div>
+			<div class="point_container" id="shopify" :style="shopify">
+				<button class="button_point"></button>
+				<p class="titre">Shopify</p>
+			</div>
+			<div class="point_container" id="joomla" :style="joomla">
+				<button class="button_point"></button>
+				<p class="titre">Joomla</p>
+			</div>
+			<div class="point_container" id="git" :style="git">
+				<button class="button_point"></button>
+				<p class="titre">Git</p>
+			</div>
+			<div class="point_container" id="nodejs" :style="nodejs">
+				<button class="button_point"></button>
+				<p class="titre">NodeJS</p>
+			</div>
+			<div class="point_container" id="lowCode" :style="lowCode">
+				<button class="button_point"></button>
+				<p class="titre">Low / No Code</p>
+			</div>
 		</div>
 		<div class="bar_container">
-			<input v-model="timeBar" type="range" id="time_bar" name="time" min="1" max="5">
+			<input v-model="timeBar" type="range" id="time_bar" name="time" min="1" max="4">
+			<div class="marckers_line">
+				<div class="marcker_line">
+					<span class="bar_2000"></span>
+					<p>2000</p>
+				</div>
+				<div class="marcker_line">
+					<span class="bar_2012"></span>
+					<p>2012</p>
+				</div>
+				<div class="marcker_line">
+					<span class="bar_2017"></span>
+					<p>2017</p>
+				</div>
+				<div class="marcker_line">
+					<span class="bar_2021"></span>
+					<p>2021</p>
+				</div>
+			</div>
 		</div>
-		<p> {{timeBar}} </p>
-	</section>	
-	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+	</section>
+	<script src="https://cdnjsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="./view/script/app.js"></script>
 </body>
 </html>

@@ -14,7 +14,7 @@ body{
     background-size: 100%;
     background:#E2E0D9;
     font-family: "typerighter", Poppins, Roboto, Oxygen, sans-serif;
-    color: black;
+    color: #1E1E1E;
 }
 
 .page_container {
@@ -36,19 +36,93 @@ body{
     font-size: 40px;
 }
 
+.popularite {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 100%;
+    width: 1px;
+    background-color: #1E1E1E;
+}
+.popularite_fleche {
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #1E1E1E;
+}
+
+
+.titre_popularite {
+    position: absolute;
+    top: -9px;
+    transform: translateX(12px);
+}
+
+.croissance {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 1px;
+    background-color: #1E1E1E;
+}
+
+.croissance_fleche {
+    position: absolute;
+    right: -2px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0; 
+    height: 0; 
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    
+    border-left: 5px solid #1E1E1E;
+}
+
+.titre_croissance {
+    position: absolute;
+    right: -2px;
+    transform: translateY(6px);
+}
+
 .nuage_container {
     position: relative;
     grid-area: nuage;
     border-radius: 15px;
-    height: 500px;
+    height: 600px;
     width: 100%;
+    font-size: 25px;
+}
+
+.point_container {
+    position: absolute;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#vue{
+    bottom: 50%;
+    left: 10%;
+}
+#lowCode{
+    bottom: 50%;
+    left: 10%;
 }
 
 .button_point {
-    position: absolute;
-    transition: 1s;
     background: white;
-    border: solid 1px black;
+    border: solid 1px #1E1E1E;
     height: 20px;
     width: 20px;
     border-radius: 100%;
@@ -58,24 +132,17 @@ body{
     background: #E2E0D9;
 }
 
-#JS {
-    bottom: 15%;
-    left: 20%;
-}
-#HTML {
-    bottom: 50%;
-    left: 30%;
-}
-
 .bar_container {
+    position: relative;
     grid-area: bar;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 30px;
 }
 #time_bar {
     width: 100%;
-    
+    z-index: 2;
 }
 
 input[type=range]#time_bar {
@@ -83,30 +150,71 @@ input[type=range]#time_bar {
     height: 1px;
     font: inherit;
     outline: none;
-    background: black;
+    background: #1E1E1E;
     box-sizing: border-box;
     transition: opacity .2s;
     cursor: pointer;
-    color: black;
+    color: #1E1E1E;
   }
 input[type=range]#time_bar::-webkit-slider-thumb {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     border: 1px solid rgb(0, 0, 0);
     border-radius: 100%;
-    background-color: white;
-  }
-  input[type=range]#time_bar::-moz-range-thumb {
-    width: 30px;
-    height: 30px;
+    background-color: #1E1E1E;
+}
+input[type=range]#time_bar::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
     border: 1px solid rgb(0, 0, 0);
     border-radius: 100%;
-    background-color: white;
-  }
-  input[type=range]#time_bar::-ms-thumb {
-    width: 30px;
-    height: 30px;
+    background-color: #1E1E1E;
+}
+input[type=range]#time_bar::-ms-thumb {
+    width: 25px;
+    height: 25px;
     border: 1px solid rgb(0, 0, 0);
     border-radius: 100%;
-    background-color: white;
-  }
+    background-color: #1E1E1E;
+}
+
+.marckers_line {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 40%);
+    display: flex;
+    width: 99%;
+    justify-content: space-between;
+}
+
+.marcker_line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.bar_2000 {
+    margin-bottom: 5px;
+    height: 7px;
+    width: 1px;
+    background-color: #1E1E1E;
+}
+.bar_2012 {
+    margin-bottom: 5px;
+    height: 7px;
+    width: 1px;
+    background-color: #1E1E1E;
+}
+.bar_2017 {
+    margin-bottom: 5px;
+    height: 7px;
+    width: 1px;
+    background-color: #1E1E1E;
+}
+.bar_2021 {
+    margin-bottom: 5px;
+    height: 7px;
+    width: 1px;
+    background-color: #1E1E1E;
+}
