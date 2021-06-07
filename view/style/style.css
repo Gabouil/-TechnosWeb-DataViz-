@@ -11,6 +11,7 @@ a {
 	src: url("../ressources/rm_typerighter.woff");
 }
 body{
+    overflow-x: hidden;
     background-size: 100%;
     background:#E2E0D9;
     font-family: "typerighter", Poppins, Roboto, Oxygen, sans-serif;
@@ -36,6 +37,7 @@ body{
     font-size: 40px;
 }
 
+/* création des flêches de du quadrant */
 .popularite {
     position: absolute;
     top: 50%;
@@ -60,8 +62,9 @@ body{
 
 .titre_popularite {
     position: absolute;
-    top: -9px;
-    transform: translateX(12px);
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .croissance {
@@ -93,14 +96,23 @@ body{
     transform: translateY(6px);
 }
 
+/* gestion du Quadrant */
 .nuage_container {
     position: relative;
     grid-area: nuage;
-    border-radius: 15px;
+    margin-top: 20px;
     height: 600px;
     width: 100%;
     font-size: 25px;
 }
+
+#legende {
+    position: absolute;
+    z-index: 2;
+    width: 600px;
+    bottom: 50px;
+    right: -730px;
+    } 
 
 .point_container {
     position: absolute;
@@ -132,7 +144,37 @@ body{
     background: #E2E0D9;
 }
 
+/* gestion des catégorie du quadrant */
+.class_categorie {
+    font-size: 40px;
+    position: absolute;
+}
+#tandance {
+    top: 0;
+    right: 0;
+    color: #7EA477;
+}
+#etablie {
+    top: 0;
+    left: 0;
+    color: #55618B;
+}
+#mourrant {
+    bottom: 0;
+    left: 0;
+    color: #CC6363;
+}
+#emergeant {
+    bottom: 0;
+    right: 0;
+    color: #D1902E;
+}
+
+/* géstion de la bare de défillement */
+
+
 .bar_container {
+    margin-top: 50px;
     position: relative;
     grid-area: bar;
     display: flex;
@@ -144,6 +186,7 @@ body{
     width: 100%;
     z-index: 2;
 }
+
 
 input[type=range]#time_bar {
     -webkit-appearance: none;
@@ -217,4 +260,41 @@ input[type=range]#time_bar::-ms-thumb {
     height: 7px;
     width: 1px;
     background-color: #1E1E1E;
+}
+
+@media screen and ( max-width: 440px) {
+    .titre_container {
+        font-size: 25px;
+    }
+    /* gestion du Quadrant */
+    .nuage_container {
+        height: 350px;
+        font-size: 25px;
+    }
+    #legende {
+    position: absolute;
+    z-index: 2;
+    width: 350px;
+    bottom: -90px;
+    right: -330px;
+    } 
+
+    /* gestion des catégorie du quadrant */
+    .class_categorie {
+        font-size: 25px;
+    }
+
+    /* géstion de la bare de défillement */
+    #time_bar {
+        width: 70%;
+        z-index: 2;
+    }
+    .marckers_line {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 40%);
+        display: flex;
+        width: 69%;
+        justify-content: space-between;
+    }
 }
