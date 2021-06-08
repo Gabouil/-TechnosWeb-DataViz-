@@ -6,16 +6,55 @@
 a {
     text-decoration: none;
 }
+html {
+    overflow-x: hidden;
+}
+
+img {
+    user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    -webkit-user-drag: none; -webkit-user-select: none; 
+    -moz-user-drag: none; 
+}
+
+
 @font-face {
 	font-family: "typerighter";
 	src: url("../ressources/rm_typerighter.woff");
 }
 body{
-    overflow-x: hidden;
     background-size: 100%;
     background:#E2E0D9;
     font-family: "typerighter", Poppins, Roboto, Oxygen, sans-serif;
     color: #1E1E1E;
+}
+
+#button_night {
+    width: 100px;
+    cursor: pointer;
+}
+#button_night img{
+    width: 100%;
+}
+.nuit {
+    display: none;
+    z-index: 100;
+    position: fixed;
+    top: -1px;
+    width: 100vw;
+    height: 1px;
+    box-shadow: 0px 0px 0px 100vh rgb(0, 0, 0);
+    opacity: 50%;
+}
+#cursor {
+    position: fixed;
+    z-index: 101;
+    height: 0px;
+    width: 0px;
+    border-radius: 100%;
+    box-shadow: 0px 0px 300px 200px rgb(245, 255, 101);
+    opacity: 150%;
 }
 
 .page_container {
@@ -108,10 +147,11 @@ body{
 
 #legende {
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     width: 600px;
     bottom: 50px;
-    right: -730px;
+    right: -490px;
+    transition: 0.5s;
     } 
 
 .point_container {
@@ -226,7 +266,7 @@ input[type=range]#time_bar::-ms-thumb {
     left: 50%;
     transform: translate(-50%, 40%);
     display: flex;
-    width: 99%;
+    width: 100%;
     justify-content: space-between;
 }
 
@@ -263,6 +303,9 @@ input[type=range]#time_bar::-ms-thumb {
 }
 
 @media screen and ( max-width: 440px) {
+    #button_night {
+        display: none;
+    }
     .titre_container {
         font-size: 25px;
     }
@@ -272,12 +315,10 @@ input[type=range]#time_bar::-ms-thumb {
         font-size: 25px;
     }
     #legende {
-    position: absolute;
-    z-index: 2;
-    width: 350px;
-    bottom: -90px;
-    right: -330px;
-    } 
+        width: 350px;
+        top: 55vh;
+        right: -280px;
+    }
 
     /* gestion des catégorie du quadrant */
     .class_categorie {

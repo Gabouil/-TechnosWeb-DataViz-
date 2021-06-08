@@ -1,3 +1,33 @@
+const cursor = document.getElementById("cursor")
+const night = document.querySelector(".nuit")
+const buttonNight = document.getElementById("button_night")
+var nightOn = false
+const legende = document.getElementById("legende")
+var legendeOn = false
+
+buttonNight.addEventListener('click', function(){
+    if(nightOn == false) {
+        nightOn = true
+        night.setAttribute('style', 'display: block;')
+    } else {
+        nightOn = false
+        night.setAttribute('style', 'display: none;')
+    }
+})
+legende.addEventListener('click', function(){
+    if(legendeOn == false) {
+        legendeOn = true
+        legende.setAttribute('style', 'right: -5px;')
+    } else {
+        legendeOn = false
+        legende.setAttribute('style', '')
+    }
+})
+
+document.addEventListener('mousemove', e => {
+    cursor.setAttribute('style', 'top:'+(e.clientY)+"px; left:"+(e.clientX)+"px;")
+})
+
 new Vue({
     el: "#mon_app",
     data: {
