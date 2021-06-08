@@ -14,6 +14,11 @@ buttonNight.addEventListener('click', function(){
         night.setAttribute('style', 'display: none;')
     }
 })
+
+document.addEventListener('mousemove', e => {
+    cursor.setAttribute('style', 'top:'+(e.clientY)+"px; left:"+(e.clientX)+"px;")
+})
+
 legende.addEventListener('click', function(){
     if(legendeOn == false) {
         legendeOn = true
@@ -24,9 +29,59 @@ legende.addEventListener('click', function(){
     }
 })
 
-document.addEventListener('mousemove', e => {
-    cursor.setAttribute('style', 'top:'+(e.clientY)+"px; left:"+(e.clientX)+"px;")
-})
+const canvaTandance = document.getElementById("canvas_tandance")
+const canvaEtabli = document.getElementById("canvas_etabli")
+const canvaMourrant = document.getElementById("canvas_mourrant")
+const canvaEmergeant = document.getElementById("canvas_emergeant")
+var points = document.querySelectorAll(".button_point")
+
+function elementPosition (a) {
+    var b = a.getBoundingClientRect();
+    return {
+      clientX: a.offsetLeft,
+      clientY: a.offsetTop,
+      clientX: (b.x || b.left),
+      clientY: (b.y || b.top)
+    }
+  }
+
+
+var positionTandance = elementPosition(canvaTandance)
+var positionEtabli = elementPosition(canvaEtabli)
+var positionMourrant = elementPosition(canvaMourrant)
+var positionEmergeant = elementPosition(canvaEmergeant)
+var positionPoints = []
+points.forEach(point => {
+    positionPoints.push(elementPosition(point))
+});
+
+
+function testerCollision(woBox, woPoint ,boxBX, boxAX, boxBY, boxAY, largeurBoxA, largeurBoxB, hauteurBoxA, hauteurBoxB ) {
+    if (!(boxBX > boxAX + largeurBoxA || boxBX < boxAX - largeurBoxB || boxBY > boxAY + hauteurBoxA || boxBY < boxAY - hauteurBoxB)) {
+        if(woBox == "Tandance"){
+            points[woPoint].setAttribute('style', 'background-color: #7EA477;')
+        }else if(woBox == "Etabli"){
+            points[woPoint].setAttribute('style', 'background-color: #55618B;')
+        }else if(woBox == "Mourrant"){
+            points[woPoint].setAttribute('style', 'background-color: #CC6363;')
+        }else if(woBox == "Emergeant"){
+            points[woPoint].setAttribute('style', 'background-color: #D1902E;')
+        }
+    }
+}
+
+function testColorPoint() {
+    let conteur = 0
+    positionPoints.forEach(point => {
+        testerCollision("Tandance", conteur ,point.clientX, positionTandance.clientX, point.clientY, positionTandance.clientY, canvaTandance.offsetWidth, points[conteur].offsetWidth, canvaTandance.offsetHeight, points[conteur].offsetHeight)
+        testerCollision("Etabli", conteur ,point.clientX, positionEtabli.clientX, point.clientY, positionEtabli.clientY, canvaEtabli.offsetWidth, points[conteur].offsetWidth, canvaEtabli.offsetHeight, points[conteur].offsetHeight)
+        testerCollision("Mourrant", conteur ,point.clientX, positionMourrant.clientX, point.clientY, positionMourrant.clientY, canvaMourrant.offsetWidth, points[conteur].offsetWidth, canvaMourrant.offsetHeight, points[conteur].offsetHeight)
+        testerCollision("Emergeant", conteur ,point.clientX, positionEmergeant.clientX, point.clientY, positionEmergeant.clientY, canvaEmergeant.offsetWidth, points[conteur].offsetWidth, canvaEmergeant.offsetHeight, points[conteur].offsetHeight)
+        conteur += 1
+    });
+}
+
+testColorPoint()
 
 new Vue({
     el: "#mon_app",
