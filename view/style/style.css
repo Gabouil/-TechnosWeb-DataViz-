@@ -60,7 +60,6 @@ body{
 .page_container {
     display: grid;
     grid-template-columns: 0.2fr 1fr 0.2fr;
-    grid-template-rows: 0.2fr 1fr 0.2fr;
     grid-template-areas: 
     ". titre ."
     ". nuage ."
@@ -346,6 +345,20 @@ input[type=range]#time_bar::-ms-thumb {
 }
 .plus_info img{
     width: 150px;
+}
+
+/* --------------------------------------------------------- ScrollDown --------------------------------------------------------- */
+
+#infosScroll {
+    margin: 150px 20%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    row-gap: 150px;
+    align-content: center;
+}
+#infosScroll section {
+    font-size: 2em;
 }
 
 @media screen and ( max-width: 440px) {
