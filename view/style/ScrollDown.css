@@ -1,0 +1,22 @@
+.infosScroll {
+    margin: 150px 20%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    row-gap: 150px;
+    align-content: center;
+}
+.infosScroll section {
+    font-size: 2em;
+}
+.infosScroll section em::before {
+    content:"";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    z-index: -1;
+    background-color: yellow;
+}
+
