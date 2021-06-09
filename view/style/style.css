@@ -61,7 +61,7 @@ main {
 .page_container {
     display: grid;
     grid-template-columns: 0.2fr 1fr 0.2fr;
-    grid-template-rows: 0.2fr 1fr 0.2fr 0.2fr;
+    grid-template-rows: 0.2fr 1fr 0.1fr 0.2fr;
     grid-template-areas: 
     ". titre ."
     ". nuage ."
@@ -326,6 +326,9 @@ input[type=range]#time_bar::-ms-thumb {
     justify-content: center;
     flex-direction: column;
 }
+.marcker_line p{
+    line-height: 40px;
+}
 
 .bar_2004 {
     margin-bottom: 5px;
@@ -357,7 +360,6 @@ input[type=range]#time_bar::-ms-thumb {
     grid-area: plusInfo;
     width: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 .plus_info img{
@@ -380,6 +382,9 @@ input[type=range]#time_bar::-ms-thumb {
     .plus_info img{
         width: 100px;
     }
+    .page_container {
+        grid-template-rows: 0.2fr 1fr 0.2fr 0.2fr;
+    }
     /* gestion du Quadrant */
     .nuage_container {
         height: 350px;
@@ -392,7 +397,7 @@ input[type=range]#time_bar::-ms-thumb {
 
     #legende {
         width: 350px;
-        top: 55vh;
+        top: 75%;
         right: -280px;
     }
 
@@ -403,6 +408,12 @@ input[type=range]#time_bar::-ms-thumb {
     .canvas_color_point {
         height: 47%;
         width: 47%;
+    }
+
+    .titre_croissance {
+        right: -50px;
+        top: 50%;
+        transform: translateY(-40%) rotate(90deg);
     }
 
     /* géstion de la bare de défillement */
