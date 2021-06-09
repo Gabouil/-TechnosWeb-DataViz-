@@ -164,9 +164,13 @@ body{
     justify-content: center;
 }
 
+#css{
+    bottom: 10%;
+    left: 10%;
+}
 #c{
-    bottom: 0%;
-    left: 60%;
+    bottom: 10%;
+    left: 80%;
 }
 #cpp{
     bottom: 80%;
@@ -196,7 +200,7 @@ body{
     height: 48%;
     width: 48%;
 }
-#canvas_Tendance {
+#canvas_tendance {
     top: 0;
     right: 0;
 
@@ -219,7 +223,7 @@ body{
     font-size: 40px;
     position: absolute;
 }
-#Tendance {
+#tendance {
     top: 0;
     right: 0;
     color: #7EA477;
