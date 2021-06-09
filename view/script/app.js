@@ -32,7 +32,7 @@ legende.addEventListener('click', function(){
 
 const canvaTendance = document.getElementById("canvas_tendance")
 const canvaEtabli = document.getElementById("canvas_etabli")
-const canvaMourrant = document.getElementById("canvas_mourrant")
+const canvamenacees = document.getElementById("canvas_menacees")
 const canvaEmergeant = document.getElementById("canvas_emergeant")
 var points = document.querySelectorAll(".button_point")
 
@@ -49,7 +49,7 @@ function elementPosition (a) {
 
 var positionTendance = elementPosition(canvaTendance)
 var positionEtabli = elementPosition(canvaEtabli)
-var positionMourrant = elementPosition(canvaMourrant)
+var positionmenacees = elementPosition(canvamenacees)
 var positionEmergeant = elementPosition(canvaEmergeant)
 var positionPoints = []
 points.forEach(point => {
@@ -60,7 +60,7 @@ function recupPos() {
     positionPoints = []
     positionTendance = elementPosition(canvaTendance)
     positionEtabli = elementPosition(canvaEtabli)
-    positionMourrant = elementPosition(canvaMourrant)
+    positionmenacees = elementPosition(canvamenacees)
     positionEmergeant = elementPosition(canvaEmergeant)
     points.forEach(point => {
         positionPoints.push(elementPosition(point))
@@ -74,7 +74,7 @@ function testerCollision(woBox, woPoint ,boxBX, boxAX, boxBY, boxAY, largeurBoxA
             points[woPoint].setAttribute('style', 'background-color: #7EA477;')
         }else if(woBox == "Etabli"){
             points[woPoint].setAttribute('style', 'background-color: #55618B;')
-        }else if(woBox == "Mourrant"){
+        }else if(woBox == "menacees"){
             points[woPoint].setAttribute('style', 'background-color: #CC6363;')
         }else if(woBox == "Emergeant"){
             points[woPoint].setAttribute('style', 'background-color: #D1902E;')
@@ -88,7 +88,7 @@ function testColorPoint() {
     positionPoints.forEach(point => {
         testerCollision("Tendance", conteur ,point.clientX, positionTendance.clientX, point.clientY, positionTendance.clientY, canvaTendance.offsetWidth, points[conteur].offsetWidth, canvaTendance.offsetHeight, points[conteur].offsetHeight)
         testerCollision("Etabli", conteur ,point.clientX, positionEtabli.clientX, point.clientY, positionEtabli.clientY, canvaEtabli.offsetWidth, points[conteur].offsetWidth, canvaEtabli.offsetHeight, points[conteur].offsetHeight)
-        testerCollision("Mourrant", conteur ,point.clientX, positionMourrant.clientX, point.clientY, positionMourrant.clientY, canvaMourrant.offsetWidth, points[conteur].offsetWidth, canvaMourrant.offsetHeight, points[conteur].offsetHeight)
+        testerCollision("menacees", conteur ,point.clientX, positionmenacees.clientX, point.clientY, positionmenacees.clientY, canvamenacees.offsetWidth, points[conteur].offsetWidth, canvamenacees.offsetHeight, points[conteur].offsetHeight)
         testerCollision("Emergeant", conteur ,point.clientX, positionEmergeant.clientX, point.clientY, positionEmergeant.clientY, canvaEmergeant.offsetWidth, points[conteur].offsetWidth, canvaEmergeant.offsetHeight, points[conteur].offsetHeight)
         conteur += 1
     });

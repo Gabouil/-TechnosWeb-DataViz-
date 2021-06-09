@@ -224,7 +224,7 @@ main {
     top: 0;
     left: 0;
 }
-#canvas_mourrant {
+#canvas_menacees {
     bottom: 0;
     left: 0;
 }
@@ -248,7 +248,7 @@ main {
     left: 0;
     color: #55618B;
 }
-#mourrant {
+#menacees {
     bottom: 0;
     left: 0;
     color: #CC6363;
