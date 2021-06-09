@@ -360,6 +360,11 @@ input[type=range]#time_bar::-ms-thumb {
         height: 350px;
         font-size: 25px;
     }
+    .button_point {
+        height: 15px;
+        width: 15px;
+    }
+
     #legende {
         width: 350px;
         top: 55vh;
@@ -369,6 +374,10 @@ input[type=range]#time_bar::-ms-thumb {
     /* gestion des catégorie du quadrant */
     .class_categorie {
         font-size: 25px;
+    }
+    .canvas_color_point {
+        height: 47%;
+        width: 47%;
     }
 
     /* géstion de la bare de défillement */
