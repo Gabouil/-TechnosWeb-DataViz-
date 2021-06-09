@@ -159,9 +159,13 @@ body{
     position: absolute;
     transition: 1s;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+}
+
+.titre {
+    line-height: 15px;
 }
 
 #css{
@@ -186,6 +190,7 @@ body{
 }
 
 .button_point {
+    margin-right: 5px;
     background: black;
     border: none;
     height: 20px;
