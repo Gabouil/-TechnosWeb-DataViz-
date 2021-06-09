@@ -3,6 +3,7 @@ new Vue({
     el: "#mon_app",
     data: {
         timeBar : 1,
+        
     },
     computed: {
         // langage

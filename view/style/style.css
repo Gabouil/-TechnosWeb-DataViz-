@@ -146,6 +146,7 @@ body{
 }
 
 #legende {
+    cursor: pointer;
     position: absolute;
     z-index: 3;
     width: 600px;
@@ -181,22 +182,19 @@ body{
 }
 
 .button_point {
-    background: white;
+    background: black;
     border: none;
     height: 20px;
     width: 20px;
     border-radius: 100%;
     cursor: pointer;
 }
-.button_point:hover {
-    background: #E2E0D9;
-}
 
 /* gestion des catégorie du quadrant */
 .canvas_color_point {
     position: absolute;
-    height: 50%;
-    width: 50%;
+    height: 48%;
+    width: 48%;
 }
 #canvas_Tendance {
     top: 0;
@@ -309,7 +307,7 @@ input[type=range]#time_bar::-ms-thumb {
     flex-direction: column;
 }
 
-.bar_2000 {
+.bar_2004 {
     margin-bottom: 5px;
     height: 7px;
     width: 1px;
@@ -332,6 +330,18 @@ input[type=range]#time_bar::-ms-thumb {
     height: 7px;
     width: 1px;
     background-color: #1E1E1E;
+}
+
+/* placement de plus d'info */
+.plus_info {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.plus_info img{
+    width: 150px;
 }
 
 @media screen and ( max-width: 440px) {

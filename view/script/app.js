@@ -1,21 +1,21 @@
 const cursor = document.getElementById("cursor")
 const night = document.querySelector(".nuit")
-const buttonNight = document.getElementById("button_night")
+// const buttonNight = document.getElementById("button_night")
 var nightOn = false
 const legende = document.getElementById("legende")
 var legendeOn = false
 const timeBar = document.getElementById("time_bar")
 
 
-buttonNight.addEventListener('click', function(){
-    if(nightOn == false) {
-        nightOn = true
-        night.setAttribute('style', 'display: block;')
-    } else {
-        nightOn = false
-        night.setAttribute('style', 'display: none;')
-    }
-})
+// buttonNight.addEventListener('click', function(){
+//     if(nightOn == false) {
+//         nightOn = true
+//         night.setAttribute('style', 'display: block;')
+//     } else {
+//         nightOn = false
+//         night.setAttribute('style', 'display: none;')
+//     }
+// })
 
 document.addEventListener('mousemove', e => {
     cursor.setAttribute('style', 'top:'+(e.clientY)+"px; left:"+(e.clientX)+"px;")
@@ -56,6 +56,10 @@ var positionPoints = []
 
 function recupPos() {
     positionPoints = []
+    positionTendance = elementPosition(canvaTendance)
+    positionEtabli = elementPosition(canvaEtabli)
+    positionMourrant = elementPosition(canvaMourrant)
+    positionEmergeant = elementPosition(canvaEmergeant)
     points.forEach(point => {
         positionPoints.push(elementPosition(point))
     });
@@ -88,4 +92,10 @@ function testColorPoint() {
 }
 
 testColorPoint();
-points[0].addEventListener("transitionend", testColorPoint);
+
+timeBar.addEventListener('mousedown', function(){
+    setTimeout(function(){ testColorPoint(); }, 700);;
+})
+timeBar.addEventListener('mouseup', function(){
+    setTimeout(function(){ testColorPoint(); }, 700);;
+})
