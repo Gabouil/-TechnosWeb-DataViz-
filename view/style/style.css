@@ -141,8 +141,8 @@ main {
 
 .titre_croissance {
     position: absolute;
-    right: -2px;
-    transform: translateY(6px);
+    right: -40px;
+    transform: translateY(-30px);
 }
 
 /* gestion du Quadrant */
@@ -411,7 +411,7 @@ input[type=range]#time_bar::-ms-thumb {
     }
 
     .titre_croissance {
-        right: -50px;
+        right: -60px;
         top: 50%;
         transform: translateY(-40%) rotate(90deg);
     }
