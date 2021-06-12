@@ -202,7 +202,7 @@ new Vue({
             }
         },
         // back
-        laraval : function(){
+        laravel : function(){
             return {
                 bottom : this.bottom[20] + "%",
                 left : this.left[20] + "%"
