@@ -6,6 +6,15 @@ const legende = document.getElementById("legende")
 var legendeOn = false
 const timeBar = document.getElementById("time_bar")
 
+// var ourResquest = new XMLHttpRequest()
+// ourResquest.open('GET', "https://datavisual1.000webhostapp.com/api_test/api/info/lecture.php")
+// ourResquest.onload = function() {
+//     var ourData = JSON.parse(ourResquest.responseText)
+//     ourData = ourData['data']
+//     console.log(ourData[0])
+// }
+// ourResquest.send()
+
 // buttonNight.addEventListener('click', function(){
 //     if(nightOn == false) {
 //         nightOn = true
@@ -94,13 +103,13 @@ function testColorPoint() {
     });
 }
 
-testColorPoint();
+setTimeout(function(){ testColorPoint(); }, 1500);;
 
 timeBar.addEventListener('mousedown', function(){
-    setTimeout(function(){ testColorPoint(); }, 700);;
+    setTimeout(function(){ testColorPoint(); }, 1000);;
 })
 timeBar.addEventListener('mouseup', function(){
-    setTimeout(function(){ testColorPoint(); }, 700);;
+    setTimeout(function(){ testColorPoint(); }, 1000);;
 })
 timeBar.addEventListener('touchstart', function(){
     setTimeout(function(){ testColorPoint(); }, 1000);;

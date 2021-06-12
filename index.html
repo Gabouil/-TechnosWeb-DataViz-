@@ -218,7 +218,7 @@
 			</div>
 			<img id="legende" src="./view/ressources/legende.svg" alt="">
 			<div class="bar_container">
-				<input v-model="timeBar" type="range" id="time_bar" name="time" min="1" max="4">
+				<input v-model="timeBar" type="range" id="time_bar" @change="fetchData()" name="time" min="1" max="4">
 				<div class="marckers_line">
 					<div class="marcker_line">
 						<span class="bar_2004"></span>
