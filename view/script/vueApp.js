@@ -20,9 +20,14 @@ new Vue({
                 this.left = []
                 this.bottom = []
                 if(this.timeBar == 1) {
-                    this.coef == 70
+                    this.coef = 40
                     ourData.forEach(data => {
-                        this.left.push(Number(50 + data["croissance_decroissance_2004"]/1.8))
+                        if((Number(20 + data["croissance_decroissance_2004"]/1.2)) > 60 && (Number(20 + data["croissance_decroissance_2004"]/1.2)) < 200){
+                            this.left.push(Number(20 + data["croissance_decroissance_2004"]/1.2))
+                        } 
+                        else {
+                            this.left.push(Number(50 + data["croissance_decroissance_2004"]/1.8))
+                        }
                         if(data["totale_users_year_2004"] <= 1000000) {
                             this.bottom.push(Number((50 * data["totale_users_year_2004"])/1000000))
                         } else if(data["totale_users_year_2004"] > 1000000 ) {
@@ -32,7 +37,7 @@ new Vue({
                         }
                     });
                 }else if(this.timeBar == 2) {
-                    this.coef == 70
+                    this.coef = 70
                     ourData.forEach(data => {
                         this.left.push(Number(50 + data["croissance_decroissance_2012"]/1.8))
 
@@ -45,7 +50,7 @@ new Vue({
                         }
                     });
                 }else if(this.timeBar == 3) {
-                    this.coef == 100
+                    this.coef = 100
                     ourData.forEach(data => {
                         if((Number(50 + data["croissance_decroissance_2017"]/1)) <= 50 && (Number(50 + data["croissance_decroissance_2017"]/1)) > 25){
                             this.left.push(Number(50 + data["croissance_decroissance_2017"]/0.5))
@@ -65,12 +70,12 @@ new Vue({
                         }
                     });
                 }else if(this.timeBar == 4) {
-                    this.coef == 100
+                    this.coef = 100
                     ourData.forEach(data => {
                         if((Number(50 + data["croissance_decroissance_2020"]/1)) <= 50 && (Number(50 + data["croissance_decroissance_2020"]/1)) > 25){
                             this.left.push(Number(50 + data["croissance_decroissance_2020"]/0.5))
                         } else if((Number(50 + data["croissance_decroissance_2020"]/1)) > 50 && (Number(50 + data["croissance_decroissance_2020"]/1)) < 70){
-                            this.left.push(Number(50 + data["croissance_decroissance_2020"]/1.5))
+                            this.left.push(Number(50 + data["croissance_decroissance_2020"]/1))
                         } else {
                             this.left.push(Number(50 + data["croissance_decroissance_2020"]/1.8))
                         }
@@ -97,6 +102,12 @@ new Vue({
                 return {
                     display : "none"
                 }
+            }else if(this.timeBar == 4) {
+                return {
+                    display : "flex",
+                    bottom : this.bottom[0] + "%",
+                    left : Number(this.left[0] - 3) + "%"
+                }
             }else {
                 return {
                     display : "flex",
@@ -109,6 +120,12 @@ new Vue({
             if(this.bottom[1] == 0) {
                 return {
                     display : "none"
+                }
+            }else if(this.timeBar == 4) {
+                return {
+                    display : "flex",
+                    bottom : this.bottom[1] + "%",
+                    left : Number(this.left[1] + 2) + "%"
                 }
             }else {
                 return {
@@ -137,6 +154,12 @@ new Vue({
                 return {
                     display : "none"
                 }
+            }else if(this.timeBar == 4) {
+                return {
+                    display : "flex",
+                    bottom : "92%",
+                    left : this.left[3] + "%"
+                }
             }else {
                 return {
                     display : "flex",
@@ -163,6 +186,24 @@ new Vue({
                 return {
                     display : "none"
                 }
+            }else if(this.timeBar == 1) {
+                return {
+                    display : "flex",
+                    bottom : "92%",
+                    left : this.left[5] + "%"
+                }
+            }else if(this.timeBar == 2) {
+                return {
+                    display : "flex",
+                    bottom : "92%",
+                    left : this.left[5] + "%"
+                }
+            }else if(this.timeBar == 3) {
+                return {
+                    display : "flex",
+                    bottom : "92%",
+                    left : this.left[5] + "%"
+                }
             }else {
                 return {
                     display : "flex",
@@ -188,6 +229,12 @@ new Vue({
             if(this.bottom[7] == 0) {
                 return {
                     display : "none"
+                }
+            }else if(this.timeBar == 1) {
+                return {
+                    display : "flex",
+                    bottom : "90%",
+                    left : Number(this.left[7] - 5)   + "%"
                 }
             }else {
                 return {
@@ -229,6 +276,12 @@ new Vue({
             if(this.bottom[10] == 0) {
                 return {
                     display : "none"
+                }
+            }else if(this.timeBar == 3) {
+                return {
+                    display : "flex",
+                    bottom : Number(this.bottom[10] - 1) + "%",
+                    left : Number(this.left[10] - 3) + "%"
                 }
             }else {
                 return {
@@ -336,6 +389,12 @@ new Vue({
                 return {
                     display : "none"
                 }
+            }else if(this.timeBar == 4) {
+                return {
+                    display : "flex",
+                    bottom : this.bottom[18] + "%",
+                    left : Number(this.left[18] - 2.5) + "%"
+                }
             }else {
                 return {
                     display : "flex",
@@ -375,6 +434,12 @@ new Vue({
             if(this.bottom[21] == 0) {
                 return {
                     display : "none"
+                }
+            }else if(this.timeBar == 2) {
+                return {
+                    display : "flex",
+                    bottom : this.bottom[21] + "%",
+                    left : Number(this.left[21] + 2) + "%"
                 }
             }else {
                 return {
@@ -548,6 +613,12 @@ new Vue({
             if(this.bottom[34] == 0) {
                 return {
                     display : "none"
+                }
+            }else if(this.timeBar == 2) {
+                return {
+                    display : "flex",
+                    bottom : "92%",
+                    left : this.left[34] + "%"
                 }
             }else {
                 return {

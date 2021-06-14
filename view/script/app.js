@@ -103,9 +103,19 @@ function testColorPoint() {
     });
 }
 
+
+
 setTimeout(function(){ testColorPoint(); }, 1500);;
 
-timeBar.addEventListener('mousedown', function(){
+function change() {
+    setTimeout(function(){ testColorPoint(); }, 1000);;
+    setTimeout(function(){ testColorPoint(); }, 800);;
+    setTimeout(function(){ testColorPoint(); }, 200);;
+    testColorPoint()
+}
+timeBar.onchange = change
+
+timeBar.onchange.addEventListener('mousedown', function(){
     setTimeout(function(){ testColorPoint(); }, 1000);;
 })
 timeBar.addEventListener('mouseup', function(){

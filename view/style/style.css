@@ -169,9 +169,19 @@ main {
     position: absolute;
     transition: 1s;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
     justify-content: center;
+    cursor: pointer;
+}
+.point_container:hover {
+    z-index: 1000;
+    padding: 4px;
+    border: solid 1px #D1902E;
+    background-color: #c4c4c4;
+    border-radius: 15px;
+    transition: none;
 }
 
 .titre {
@@ -179,19 +189,19 @@ main {
 }
 
 .button_point {
-    margin-right: 5px;
     background: black;
-    border: none;
+    border: solid 1px;
     height: 20px;
     width: 20px;
     border-radius: 100%;
-    cursor: pointer;
+    z-index: 3;
 }
+
 
 /* gestion des catégorie du quadrant */
 .canvas_color_point {
     position: absolute;
-    height: 48%;
+    height: 49%;
     width: 49%;
 }
 #canvas_tendance {
@@ -327,7 +337,7 @@ input[type=range]#time_bar::-ms-thumb {
     width: 1px;
     background-color: #1E1E1E;
 }
-.bar_2021 {
+.bar_2020 {
     margin-bottom: 5px;
     height: 7px;
     width: 1px;
