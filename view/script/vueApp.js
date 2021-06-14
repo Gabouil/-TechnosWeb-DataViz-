@@ -5,7 +5,7 @@ new Vue({
         timeBar : 1,
         bottom : [],
         left : [],
-        coef : 80,
+        coef : 90,
     },
     created() {
         this.fetchData();
@@ -20,6 +20,7 @@ new Vue({
                 this.left = []
                 this.bottom = []
                 if(this.timeBar == 1) {
+                    this.coef == 70
                     ourData.forEach(data => {
                         this.left.push(Number(50 + data["croissance_decroissance_2004"]/1.8))
                         if(data["totale_users_year_2004"] <= 1000000) {
@@ -31,6 +32,7 @@ new Vue({
                         }
                     });
                 }else if(this.timeBar == 2) {
+                    this.coef == 70
                     ourData.forEach(data => {
                         this.left.push(Number(50 + data["croissance_decroissance_2012"]/1.8))
 
@@ -43,8 +45,16 @@ new Vue({
                         }
                     });
                 }else if(this.timeBar == 3) {
+                    this.coef == 100
                     ourData.forEach(data => {
-                        this.left.push(Number(50 + data["croissance_decroissance_2017"]/1.8))
+                        if((Number(50 + data["croissance_decroissance_2017"]/1)) <= 50 && (Number(50 + data["croissance_decroissance_2017"]/1)) > 25){
+                            this.left.push(Number(50 + data["croissance_decroissance_2017"]/0.5))
+                        } else if((Number(50 + data["croissance_decroissance_2017"]/1)) > 50 && (Number(50 + data["croissance_decroissance_2017"]/1)) < 70){
+                            this.left.push(Number(50 + data["croissance_decroissance_2017"]/1.5))
+                        } else {
+                            this.left.push(Number(50 + data["croissance_decroissance_2017"]/1.8))
+                        }
+                        
 
                         if(data["totale_users_year_2017"] <= 1000000){
                             this.bottom.push(Number((50 * data["totale_users_year_2017"])/1000000))
@@ -55,8 +65,15 @@ new Vue({
                         }
                     });
                 }else if(this.timeBar == 4) {
+                    this.coef == 100
                     ourData.forEach(data => {
-                        this.left.push(Number(50 + data["croissance_decroissance_2020"]/1.8))
+                        if((Number(50 + data["croissance_decroissance_2020"]/1)) <= 50 && (Number(50 + data["croissance_decroissance_2020"]/1)) > 25){
+                            this.left.push(Number(50 + data["croissance_decroissance_2020"]/0.5))
+                        } else if((Number(50 + data["croissance_decroissance_2020"]/1)) > 50 && (Number(50 + data["croissance_decroissance_2020"]/1)) < 70){
+                            this.left.push(Number(50 + data["croissance_decroissance_2020"]/1.5))
+                        } else {
+                            this.left.push(Number(50 + data["croissance_decroissance_2020"]/1.8))
+                        }
 
                         if(data["totale_users_year_2020"] < 1000000){
                             this.bottom.push(Number((50 * data["totale_users_year_2020"])/1000000))
