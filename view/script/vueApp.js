@@ -13,16 +13,17 @@ new Vue({
         infos : [],
         info : [],
 
-        toggle0 : false,
-        toggle1 : false,
-        toggle2 : false,
-        toggle3 : false,
-        toggle4 : false,
-        toggle5 : false,
-        toggle6 : false,
-        toggle7 : false,
-        toggle8 : false,
-        toggle9 : false,
+
+        toggle0  : false,
+        toggle1  : false,
+        toggle2  : false,
+        toggle3  : false,
+        toggle4  : false,
+        toggle5  : false,
+        toggle6  : false,
+        toggle7  : false,
+        toggle8  : false,
+        toggle9  : false,
         toggle10 : false,
         toggle11 : false,
         toggle12 : false,
@@ -56,14 +57,16 @@ new Vue({
         toggle40 : false,
         toggle41 : false,
 
+        points : [],
+
         // selecteur
-        toggleFront : false,
-        toggleBack : false,
-        toggleFrontBack : false,
-        toggleLangage : false,
-        toggleFramework : false,
-        toggleOutil : false,
-        toggleServeur : false,
+        toggleFront : true,
+        toggleBack : true,
+        toggleFrontBack : true,
+        toggleLangage : true,
+        toggleFramework : true,
+        toggleOutil : true,
+        toggleServeur : true,
 
     },
     created() {
@@ -244,14 +247,19 @@ new Vue({
                 return this.infos[id][id_type];
             }
         },
+        refreshBulle : function() {
+            if(this.toggle0 == true) {
+                this.toggle0 = false
+            }
+        },
         rechargeSelect : function() {
-            this.toggleFront = false
-            this.toggleBack = false
-            this.toggleFrontBack = false
-            this.toggleLangage = false
-            this.toggleFramework = false
-            this.toggleOutil = false
-            this.toggleServeur = false
+            this.toggleFront = true
+            this.toggleBack = true
+            this.toggleFrontBack = true
+            this.toggleLangage = true
+            this.toggleFramework = true
+            this.toggleOutil = true
+            this.toggleServeur = true
         }
     },
     computed: {
