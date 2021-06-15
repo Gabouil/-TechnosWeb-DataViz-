@@ -299,6 +299,9 @@ main {
     flex-wrap: wrap;
 }
 .selecteur {
+    font-family: "typerighter";
+    font-size: 25px;
+    padding-bottom: 30px;
     height: 30px;
     width: 50%;
     border-radius: 15px;

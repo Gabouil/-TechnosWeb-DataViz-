@@ -244,6 +244,15 @@ new Vue({
                 return this.infos[id][id_type];
             }
         },
+        rechargeSelect : function() {
+            this.toggleFront = false
+            this.toggleBack = false
+            this.toggleFrontBack = false
+            this.toggleLangage = false
+            this.toggleFramework = false
+            this.toggleOutil = false
+            this.toggleServeur = false
+        }
     },
     computed: {
         // langage

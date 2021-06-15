@@ -103,14 +103,46 @@ function testColorPoint() {
     });
 }
 
+const selectFront = document.getElementById("select_front")
+const selectBack = document.getElementById("select_back")
+const selectFrontBack = document.getElementById("select_front_back")
+const selectLangage = document.getElementById("select_langage")
+const selectFramework = document.getElementById("select_framework")
+const selectOutil = document.getElementById("select_outil")
+const selectServeur = document.getElementById("select_serveur")
+const selectRecharge = document.getElementById("select_recharge")
 
-
-setTimeout(function(){ testColorPoint(); }, 1500);;
+setTimeout(function(){ testColorPoint(); }, 1500);
 
 function change() {
-    setTimeout(function(){ testColorPoint(); }, 1000);;
-    setTimeout(function(){ testColorPoint(); }, 800);;
-    setTimeout(function(){ testColorPoint(); }, 200);;
+    setTimeout(function(){ testColorPoint(); }, 1000);
+    setTimeout(function(){ testColorPoint(); }, 800);
+    setTimeout(function(){ testColorPoint(); }, 200);
     testColorPoint()
 }
 timeBar.onchange = change
+
+selectFront.addEventListener('click', e => {
+    setTimeout(function(){ testColorPoint(); }, 500);
+});
+selectBack.addEventListener('click', e => {
+    setTimeout(function(){ testColorPoint(); }, 500);
+});
+selectFrontBack.addEventListener('click', e => {
+    setTimeout(function(){ testColorPoint(); }, 500);
+});
+selectLangage.addEventListener('click', e => {
+    setTimeout(function(){ testColorPoint(); }, 500);
+});
+selectFramework.addEventListener('click', e => {
+    setTimeout(function(){ testColorPoint(); }, 500);
+});
+selectOutil.addEventListener('click', e => {
+    setTimeout(function(){ testColorPoint(); }, 500);
+});
+selectServeur.addEventListener('click', e => {
+    setTimeout(function(){ testColorPoint(); }, 500);
+});
+selectRecharge.addEventListener('click', e => {
+    setTimeout(function(){ testColorPoint(); }, 500);
+});

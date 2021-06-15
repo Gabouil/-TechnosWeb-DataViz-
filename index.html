@@ -792,29 +792,28 @@
 			</div>
 			<img id="legende" src="./view/ressources/legende.svg" alt="">
 			<div class="selecteur_container">
-				<button class="selecteur" v-on:click="toggleFront = !toggleFront" :class="{selectCheck : toggleFront}">
+				<button id="select_front" class="selecteur" v-on:click="toggleFront = !toggleFront" :class="{selectCheck : toggleFront}">
 					Front-end
 				</button>
-				<button class="selecteur" v-on:click="toggleBack = !toggleBack" :class="{selectCheck : toggleBack}">
+				<button id="select_back" class="selecteur" v-on:click="toggleBack = !toggleBack" :class="{selectCheck : toggleBack}">
 					Back-end
 				</button>
-				<button class="selecteur" v-on:click="toggleFrontBack = !toggleFrontBack" :class="{selectCheck : toggleFrontBack}">
+				<button id="select_front_back" class="selecteur" v-on:click="toggleFrontBack = !toggleFrontBack" :class="{selectCheck : toggleFrontBack}">
 					Front & Back
 				</button>
-				<button class="selecteur" v-on:click="toggleLangage = !toggleLangage" :class="{selectCheck : toggleLangage}">
+				<button id="select_langage" class="selecteur" v-on:click="toggleLangage = !toggleLangage" :class="{selectCheck : toggleLangage}">
 					Langage
 				</button>
-				<button class="selecteur" v-on:click="toggleFramework = !toggleFramework" :class="{selectCheck : toggleFramework}">
+				<button id="select_framework" class="selecteur" v-on:click="toggleFramework = !toggleFramework" :class="{selectCheck : toggleFramework}">
 					Framework
 				</button>
-				<button class="selecteur" v-on:click="toggleOutil = !toggleOutil" :class="{selectCheck : toggleOutil}">
+				<button id="select_outil" class="selecteur" v-on:click="toggleOutil = !toggleOutil" :class="{selectCheck : toggleOutil}">
 					Outil
 				</button>
-				<button class="selecteur" v-on:click="toggleServeur = !toggleServeur" :class="{selectCheck : toggleServeur}">
+				<button id="select_serveur" class="selecteur" v-on:click="toggleServeur = !toggleServeur" :class="{selectCheck : toggleServeur}">
 					Serveur
 				</button>
-				<button class="selecteur_recharge">
-					<!-- v-on:click="toggleRecharge = toggleFront : false, toggleBack : false, toggleFrontBack : false, toggleLangage : false, toggleFramework : false, toggleOutil : false, toggleServeur : false, toggleBDD : false" -->
+				<button id="select_recharge" class="selecteur_recharge" v-on:click="rechargeSelect">
 					<img src="./view/ressources/rechargeSelecteur.svg" alt="">
 				</button>
 			</div>
