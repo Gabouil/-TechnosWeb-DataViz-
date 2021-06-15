@@ -3,10 +3,13 @@ new Vue({
     el: "#mon_app",
     data: {
         timeBar : 1,
+
+        // position point
         bottom : [],
         left : [],
         coef : 90,
 
+        // info bulle
         infos : [],
         info : [],
 
@@ -52,6 +55,16 @@ new Vue({
         toggle39 : false,
         toggle40 : false,
         toggle41 : false,
+
+        // selecteur
+        toggleFront : false,
+        toggleBack : false,
+        toggleFrontBack : false,
+        toggleLangage : false,
+        toggleFramework : false,
+        toggleOutil : false,
+        toggleServeur : false,
+
     },
     created() {
         this.fetchData();

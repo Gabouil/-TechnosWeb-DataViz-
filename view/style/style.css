@@ -61,11 +61,11 @@ main {
 .page_container {
     display: grid;
     grid-template-columns: 0.2fr 1fr 0.2fr;
-    grid-template-rows: 0.2fr 1fr 0.1fr 0.2fr;
+    grid-template-rows: 0.2fr 1fr 0.1fr 0.1fr 0.2fr;
     grid-template-areas: 
     ". titre ."
-    ". nuage ."
-    ". bar ."
+    "select nuage ."
+    "select bar ."
     ". plusInfo ."
     ;
 }
@@ -150,7 +150,7 @@ main {
     position: relative;
     grid-area: nuage;
     margin-top: 20px;
-    height: 600px;
+    height: 550px;
     width: 100%;
     font-size: 25px;
 }
@@ -158,9 +158,9 @@ main {
 #legende {
     cursor: pointer;
     position: absolute;
-    z-index: 3;
+    z-index: 10;
     width: 600px;
-    bottom: 50px;
+    bottom: 100px;
     right: -490px;
     transition: 0.5s;
     } 
@@ -229,22 +229,22 @@ main {
     position: absolute;
 }
 #tendance {
-    top: 0;
+    top: -20px;
     right: 0;
     color: #7EA477;
 }
 #etablie {
-    top: 0;
+    top: -20px;
     left: 0;
     color: #55618B;
 }
 #menacees {
-    bottom: 0;
+    bottom: -20px;
     left: 0;
     color: #CC6363;
 }
 #emergeant {
-    bottom: 0;
+    bottom: -20px;
     right: 0;
     color: #D1902E;
 }
@@ -287,6 +287,57 @@ main {
     background-color: #7EA477;
 }
 
+/* gestion du selecteur */
+
+.selecteur_container {
+    grid-area: select;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.selecteur {
+    height: 30px;
+    width: 50%;
+    border-radius: 15px;
+    border: 2px solid #1E1E1E;
+    background: transparent;
+    cursor: pointer;
+}
+.selecteur_recharge {
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.selectCheck {
+    background-color: #1E1E1E;
+    color: #fff;
+}
+
+.selectNoneFront {
+    display: none !important;
+}
+.selectNoneBack {
+    display: none !important;
+}
+.selectNoneFrontBack {
+    display: none !important;
+}
+.selectNoneLangage {
+    display: none !important;
+}
+.selectNoneFramework {
+    display: none !important;
+}
+.selectNoneOutil {
+    display: none !important;
+}
+.selectNoneServeur {
+    display: none !important;
+}
 /* géstion de la bare de défillement */
 
 
