@@ -42,183 +42,757 @@
 				<canvas class="canvas_color_point" id="canvas_emergeant"></canvas>
 				<!-- langage -->
 				<!-- front -->
-				<div class="point_container" id="css" :style="css">
-					<button class="button_point" ></button>
+				<div class="point_container" id="css" :style="css" v-on:click="toggle0 = !toggle0">
+					<div class="infos_bulle_container" :class="{open : toggle0}" >
+						<div class="infos_bulle" >
+							<h3 class="titre_info">{{printInfo(0,0)}}</h3>
+							<div class="div_info_pts">
+								<p>Pts : </p>
+								<p>{{printInfo(0,1)}}</p>
+							</div>
+							<div class="div_info_plus">
+								<img src="./view/ressources/trombone.svg" alt="">
+								<p>{{printInfo(0,2)}}</p>
+							</div>
+							<p class="category_info">{{printInfo(0,3)}}</p>
+						</div>
+					</div>
+					<button class="button_point"></button>
 					<p class="titre">CSS</p>
 				</div>
-				<div class="point_container" id="c" :style="c">
+				<div class="point_container" id="c" :style="c" v-on:click="toggle1 = !toggle1">
+					<div class="infos_bulle_container" :class="{open : toggle1}" >
+						<div class="infos_bulle" >
+							<h3 class="titre_info">{{printInfo(1,0)}}</h3>
+							<div class="div_info_pts">
+								<p>Pts : </p>
+								<p>{{printInfo(1,1)}}</p>
+							</div>
+							<div class="div_info_plus">
+								<img src="./view/ressources/trombone.svg" alt="">
+								<p>{{printInfo(1,2)}}</p>
+							</div>
+							<p class="category_info">{{printInfo(1,3)}}</p>
+						</div>
+					</div>
 					<button class="button_point"></button>
 					<p class="titre">C</p>
 				</div>
-				<div class="point_container" id="cpp" :style="cpp">
+				<div class="point_container" id="cpp" :style="cpp" v-on:click="toggle2 = !toggle2">
+					<div class="infos_bulle_container" :class="{open : toggle2}" >
+						<div class="infos_bulle" >
+							<h3 class="titre_info">{{printInfo(2,0)}}</h3>
+							<div class="div_info_pts">
+								<p>Pts : </p>
+								<p>{{printInfo(2,1)}}</p>
+							</div>
+							<div class="div_info_plus">
+								<img src="./view/ressources/trombone.svg" alt="">
+								<p>{{printInfo(2,2)}}</p>
+							</div>
+							<p class="category_info">{{printInfo(2,3)}}</p>
+						</div>
+					</div>
 					<button class="button_point"></button>
 					<p class="titre">C++</p>
 				</div>
 				<!-- back -->
-				<div class="point_container" id="python" :style="python">
+				<div class="point_container" id="python" :style="python" v-on:click="toggle3 = !toggle3">
+					<div class="infos_bulle_container" :class="{open : toggle3}" >
+						<div class="infos_bulle" >
+							<h3 class="titre_info">{{printInfo(3,0)}}</h3>
+							<div class="div_info_pts">
+								<p>Pts : </p>
+								<p>{{printInfo(3,1)}}</p>
+							</div>
+							<div class="div_info_plus">
+								<img src="./view/ressources/trombone.svg" alt="">
+								<p>{{printInfo(3,2)}}</p>
+							</div>
+							<p class="category_info">{{printInfo(3,3)}}</p>
+						</div>
+					</div>
 					<button class="button_point"></button>
 					<p class="titre">Python</p>
 				</div>
-				<div class="point_container" id="php" :style="php">
+				<div class="point_container" id="php" :style="php" v-on:click="toggle4 = !toggle4">
+					<div class="infos_bulle_container" :class="{open : toggle4}" >
+						<div class="infos_bulle" >
+							<h3 class="titre_info">{{printInfo(4,0)}}</h3>
+							<div class="div_info_pts">
+								<p>Pts : </p>
+								<p>{{printInfo(4,1)}}</p>
+							</div>
+							<div class="div_info_plus">
+								<img src="./view/ressources/trombone.svg" alt="">
+								<p>{{printInfo(4,2)}}</p>
+							</div>
+							<p class="category_info">{{printInfo(4,3)}}</p>
+						</div>
+					</div>
 					<button class="button_point"></button>
 					<p class="titre">PHP</p>
 				</div>
-				<div class="point_container" id="java" :style="java">
+				<div class="point_container" id="java" :style="java" v-on:click="toggle5 = !toggle5">
+					<div class="infos_bulle_container" :class="{open : toggle5}" >
+						<div class="infos_bulle" >
+							<h3 class="titre_info">{{printInfo(5,0)}}</h3>
+							<div class="div_info_pts">
+								<p>Pts : </p>
+								<p>{{printInfo(5,1)}}</p>
+							</div>
+							<div class="div_info_plus">
+								<img src="./view/ressources/trombone.svg" alt="">
+								<p>{{printInfo(5,2)}}</p>
+							</div>
+							<p class="category_info">{{printInfo(5,3)}}</p>
+						</div>
+					</div>
 					<button class="button_point"></button>
 					<p class="titre">Java</p>
 				</div>
-				<div class="point_container" id="ruby" :style="ruby">
+				<div class="point_container" id="ruby" :style="ruby" v-on:click="toggle6 = !toggle6">
+					<div class="infos_bulle_container" :class="{open : toggle6}" >
+						<div class="infos_bulle" >
+							<h3 class="titre_info">{{printInfo(6,0)}}</h3>
+							<div class="div_info_pts">
+								<p>Pts : </p>
+								<p>{{printInfo(6,1)}}</p>
+							</div>
+							<div class="div_info_plus">
+								<img src="./view/ressources/trombone.svg" alt="">
+								<p>{{printInfo(6,2)}}</p>
+							</div>
+							<p class="category_info">{{printInfo(6,3)}}</p>
+						</div>
+					</div>
 					<button class="button_point"></button>
 					<p class="titre">Ruby</p>
 				</div>
-				<div class="point_container" id="SQL" :style="sql">
+				<div class="point_container" id="SQL" :style="sql" v-on:click="toggle7 = !toggle7">
+					<div class="infos_bulle_container" :class="{open : toggle7}" >
+						<div class="infos_bulle" >
+							<h3 class="titre_info">{{printInfo(7,0)}}</h3>
+							<div class="div_info_pts">
+								<p>Pts : </p>
+								<p>{{printInfo(7,1)}}</p>
+							</div>
+							<div class="div_info_plus">
+								<img src="./view/ressources/trombone.svg" alt="">
+								<p>{{printInfo(7,2)}}</p>
+							</div>
+							<p class="category_info">{{printInfo(7,3)}}</p>
+						</div>
+					</div>
 					<button class="button_point"></button>
 					<p class="titre">SQL</p>
 				</div>
-				<div class="point_container" id="csh" :style="csh">
+				<div class="point_container" id="csh" :style="csh" v-on:click="toggle8 = !toggle8">
+					<div class="infos_bulle_container" :class="{open : toggle8}" >
+						<div class="infos_bulle" >
+							<h3 class="titre_info">{{printInfo(8,0)}}</h3>
+							<div class="div_info_pts">
+								<p>Pts : </p>
+								<p>{{printInfo(8,1)}}</p>
+							</div>
+							<div class="div_info_plus">
+								<img src="./view/ressources/trombone.svg" alt="">
+								<p>{{printInfo(8,2)}}</p>
+							</div>
+							<p class="category_info">{{printInfo(8,3)}}</p>
+						</div>
+					</div>
 					<button class="button_point"></button>
 					<p class="titre">C#</p>
 				</div>
 				<!-- front/back -->
-				<div class="point_container" id="javaScript" :style="javaScript">
+				<div class="point_container" id="javaScript" :style="javaScript" v-on:click="toggle9 = !toggle9">
+					<div class="infos_bulle_container" :class="{open : toggle9}" >
+						<div class="infos_bulle" >
+							<h3 class="titre_info">{{printInfo(9,0)}}</h3>
+							<div class="div_info_pts">
+								<p>Pts : </p>
+								<p>{{printInfo(9,1)}}</p>
+							</div>
+							<div class="div_info_plus">
+								<img src="./view/ressources/trombone.svg" alt="">
+								<p>{{printInfo(9,2)}}</p>
+							</div>
+							<p class="category_info">{{printInfo(9,3)}}</p>
+						</div>
+					</div>
 					<button class="button_point"></button>
 					<p class="titre">JavaScript</p>
 				</div>
-				<div class="point_container" id="typescript" :style="typeScript">
+				<div class="point_container" id="typescript" :style="typeScript" v-on:click="toggle10 = !toggle10">
+					<div class="infos_bulle_container" :class="{open : toggle10}" >
+						<div class="infos_bulle" >
+							<h3 class="titre_info">{{printInfo(10,0)}}</h3>
+							<div class="div_info_pts">
+								<p>Pts : </p>
+								<p>{{printInfo(10,1)}}</p>
+							</div>
+							<div class="div_info_plus">
+								<img src="./view/ressources/trombone.svg" alt="">
+								<p>{{printInfo(10,2)}}</p>
+							</div>
+							<p class="category_info">{{printInfo(10,3)}}</p>
+						</div>
+					</div>
 					<button class="button_point"></button>
 					<p class="titre">Type Script</p>
 				</div>
-				<div class="point_container" id="objectc" :style="objectc">
+				<div class="point_container" id="objectc" :style="objectc" v-on:click="toggle11 = !toggle11">
+					<div class="infos_bulle_container" :class="{open : toggle11}" >
+						<div class="infos_bulle" >
+							<h3 class="titre_info">{{printInfo(11,0)}}</h3>
+							<div class="div_info_pts">
+								<p>Pts : </p>
+								<p>{{printInfo(11,1)}}</p>
+							</div>
+							<div class="div_info_plus">
+								<img src="./view/ressources/trombone.svg" alt="">
+								<p>{{printInfo(11,2)}}</p>
+							</div>
+							<p class="category_info">{{printInfo(11,3)}}</p>
+						</div>
+					</div>
 					<button class="button_point"></button>
 					<p class="titre">Object-C</p>
 				</div>
-				<div class="point_container" id="kotlin" :style="kotlin">
+				<div class="point_container" id="kotlin" :style="kotlin" v-on:click="toggle12 = !toggle12">
+					<div class="infos_bulle_container" :class="{open : toggle12}" >
+						<div class="infos_bulle" >
+							<h3 class="titre_info">{{printInfo(12,0)}}</h3>
+							<div class="div_info_pts">
+								<p>Pts : </p>
+								<p>{{printInfo(12,1)}}</p>
+							</div>
+							<div class="div_info_plus">
+								<img src="./view/ressources/trombone.svg" alt="">
+								<p>{{printInfo(12,2)}}</p>
+							</div>
+							<p class="category_info">{{printInfo(12,3)}}</p>
+						</div>
+					</div>
 					<button class="button_point"></button>
 					<p class="titre">Kotlin</p>
 				</div>
 				<!-- Framework -->
 				<!-- front -->
-				<div class="point_container" id="reactjs" :style="reactjs">
+				<div class="point_container" id="reactjs" :style="reactjs" v-on:click="toggle13 = !toggle13">
+					<div class="infos_bulle_container" :class="{open : toggle13}" >
+						<div class="infos_bulle" >
+							<h3 class="titre_info">{{printInfo(13,0)}}</h3>
+							<div class="div_info_pts">
+								<p>Pts : </p>
+								<p>{{printInfo(13,1)}}</p>
+							</div>
+							<div class="div_info_plus">
+								<img src="./view/ressources/trombone.svg" alt="">
+								<p>{{printInfo(13,2)}}</p>
+							</div>
+							<p class="category_info">{{printInfo(13,3)}}</p>
+						</div>
+					</div>
 					<button class="button_point"></button>
 					<p class="titre">React.js</p>
 				</div>
-				<div class="point_container" id="reactNatif" :style="reactNatif">
+				<div class="point_container" id="reactNatif" :style="reactNatif" v-on:click="toggle14 = !toggle14">
+					<div class="infos_bulle_container" :class="{open : toggle14}" >
+						<div class="infos_bulle" >
+							<h3 class="titre_info">{{printInfo(14,0)}}</h3>
+							<div class="div_info_pts">
+								<p>Pts : </p>
+								<p>{{printInfo(14,1)}}</p>
+							</div>
+							<div class="div_info_plus">
+								<img src="./view/ressources/trombone.svg" alt="">
+								<p>{{printInfo(14,2)}}</p>
+							</div>
+							<p class="category_info">{{printInfo(14,3)}}</p>
+						</div>
+					</div>
 					<button class="button_point"></button>
 					<p class="titre">React Natif</p>
 				</div>
-				<div class="point_container" id="angularJS" :style="angularJS">
+				<div class="point_container" id="angularJS" :style="angularJS" v-on:click="toggle15 = !toggle15">
+					<div class="infos_bulle_container" :class="{open : toggle15}" >
+						<div class="infos_bulle" >
+							<h3 class="titre_info">{{printInfo(15,0)}}</h3>
+							<div class="div_info_pts">
+								<p>Pts : </p>
+								<p>{{printInfo(15,1)}}</p>
+							</div>
+							<div class="div_info_plus">
+								<img src="./view/ressources/trombone.svg" alt="">
+								<p>{{printInfo(15,2)}}</p>
+							</div>
+							<p class="category_info">{{printInfo(15,3)}}</p>
+						</div>
+					</div>
 					<button class="button_point"></button>
 					<p class="titre">Angular JS</p>
 				</div>
-				<div class="point_container" id="angular" :style="angular">
+				<div class="point_container" id="angular" :style="angular" v-on:click="toggle16 = !toggle16">
+					<div class="infos_bulle_container" :class="{open : toggle16}" >
+						<div class="infos_bulle" >
+							<h3 class="titre_info">{{printInfo(16,0)}}</h3>
+							<div class="div_info_pts">
+								<p>Pts : </p>
+								<p>{{printInfo(16,1)}}</p>
+							</div>
+							<div class="div_info_plus">
+								<img src="./view/ressources/trombone.svg" alt="">
+								<p>{{printInfo(16,2)}}</p>
+							</div>
+							<p class="category_info">{{printInfo(16,3)}}</p>
+						</div>
+					</div>
 					<button class="button_point"></button>
 					<p class="titre">Angular</p>
 				</div>
-				<div class="point_container" id="vue" :style="vue">
+				<div class="point_container" id="vue" :style="vue" v-on:click="toggle17 = !toggle17">
+					<div class="infos_bulle_container" :class="{open : toggle17}" >
+						<div class="infos_bulle" >
+							<h3 class="titre_info">{{printInfo(17,0)}}</h3>
+							<div class="div_info_pts">
+								<p>Pts : </p>
+								<p>{{printInfo(17,1)}}</p>
+							</div>
+							<div class="div_info_plus">
+								<img src="./view/ressources/trombone.svg" alt="">
+								<p>{{printInfo(17,2)}}</p>
+							</div>
+							<p class="category_info">{{printInfo(17,3)}}</p>
+						</div>
+					</div>
 					<button class="button_point"></button>
 					<p class="titre">Vue.js</p>
 				</div>
-				<div class="point_container" id="bootstrap" :style="bootstrap">
+				<div class="point_container" id="bootstrap" :style="bootstrap" v-on:click="toggle18 = !toggle18">
+					<div class="infos_bulle_container" :class="{open : toggle18}" >
+						<div class="infos_bulle" >
+							<h3 class="titre_info">{{printInfo(18,0)}}</h3>
+							<div class="div_info_pts">
+								<p>Pts : </p>
+								<p>{{printInfo(18,1)}}</p>
+							</div>
+							<div class="div_info_plus">
+								<img src="./view/ressources/trombone.svg" alt="">
+								<p>{{printInfo(18,2)}}</p>
+							</div>
+							<p class="category_info">{{printInfo(18,3)}}</p>
+						</div>
+					</div>
 					<button class="button_point"></button>
 					<p class="titre">Bootstrap</p>
 				</div>
-				<div class="point_container" id="tailwind" :style="tailwind">
+				<div class="point_container" id="tailwind" :style="tailwind" v-on:click="toggle19 = !toggle19">
+					<div class="infos_bulle_container" :class="{open : toggle19}" >
+						<div class="infos_bulle" >
+							<h3 class="titre_info">{{printInfo(19,0)}}</h3>
+							<div class="div_info_pts">
+								<p>Pts : </p>
+								<p>{{printInfo(19,1)}}</p>
+							</div>
+							<div class="div_info_plus">
+								<img src="./view/ressources/trombone.svg" alt="">
+								<p>{{printInfo(19,2)}}</p>
+							</div>
+							<p class="category_info">{{printInfo(19,3)}}</p>
+						</div>
+					</div>
 					<button class="button_point"></button>
 					<p class="titre">Tailwind</p>
 				</div>
 				<!-- back -->
-				<div class="point_container" id="laravel" :style="laravel">
+				<div class="point_container" id="laravel" :style="laravel" v-on:click="toggle20 = !toggle20">
+					<div class="infos_bulle_container" :class="{open : toggle20}" >
+						<div class="infos_bulle" >
+							<h3 class="titre_info">{{printInfo(20,0)}}</h3>
+							<div class="div_info_pts">
+								<p>Pts : </p>
+								<p>{{printInfo(20,1)}}</p>
+							</div>
+							<div class="div_info_plus">
+								<img src="./view/ressources/trombone.svg" alt="">
+								<p>{{printInfo(20,2)}}</p>
+							</div>
+							<p class="category_info">{{printInfo(20,3)}}</p>
+						</div>
+					</div>
 					<button class="button_point"></button>
 					<p class="titre">Laravel</p>
 				</div>
-				<div class="point_container" id="symphony" :style="symphony">
+				<div class="point_container" id="symphony" :style="symphony" v-on:click="toggle21 = !toggle21">
+					<div class="infos_bulle_container" :class="{open : toggle21}" >
+						<div class="infos_bulle" >
+							<h3 class="titre_info">{{printInfo(21,0)}}</h3>
+							<div class="div_info_pts">
+								<p>Pts : </p>
+								<p>{{printInfo(21,1)}}</p>
+							</div>
+							<div class="div_info_plus">
+								<img src="./view/ressources/trombone.svg" alt="">
+								<p>{{printInfo(21,2)}}</p>
+							</div>
+							<p class="category_info">{{printInfo(21,3)}}</p>
+						</div>
+					</div>
 					<button class="button_point"></button>
 					<p class="titre">Symphony</p>
 				</div>
-				<div class="point_container" id="rails" :style="rails">
+				<div class="point_container" id="rails" :style="rails" v-on:click="toggle22 = !toggle22">
+					<div class="infos_bulle_container" :class="{open : toggle22}" >
+						<div class="infos_bulle" >
+							<h3 class="titre_info">{{printInfo(22,0)}}</h3>
+							<div class="div_info_pts">
+								<p>Pts : </p>
+								<p>{{printInfo(22,1)}}</p>
+							</div>
+							<div class="div_info_plus">
+								<img src="./view/ressources/trombone.svg" alt="">
+								<p>{{printInfo(22,2)}}</p>
+							</div>
+							<p class="category_info">{{printInfo(22,3)}}</p>
+						</div>
+					</div>
 					<button class="button_point"></button>
 					<p class="titre">Rails</p>
 				</div>
-				<div class="point_container" id="django" :style="django">
+				<div class="point_container" id="django" :style="django" v-on:click="toggle23 = !toggle23">
+					<div class="infos_bulle_container" :class="{open : toggle23}" >
+						<div class="infos_bulle" >
+							<h3 class="titre_info">{{printInfo(23,0)}}</h3>
+							<div class="div_info_pts">
+								<p>Pts : </p>
+								<p>{{printInfo(23,1)}}</p>
+							</div>
+							<div class="div_info_plus">
+								<img src="./view/ressources/trombone.svg" alt="">
+								<p>{{printInfo(23,2)}}</p>
+							</div>
+							<p class="category_info">{{printInfo(23,3)}}</p>
+						</div>
+					</div>
 					<button class="button_point"></button>
 					<p class="titre">Django</p>
 				</div>
-				<div class="point_container" id="cakePHP" :style="cakePHP">
+				<div class="point_container" id="cakePHP" :style="cakePHP" v-on:click="toggle24 = !toggle24">
+					<div class="infos_bulle_container" :class="{open : toggle24}" >
+						<div class="infos_bulle" >
+							<h3 class="titre_info">{{printInfo(24,0)}}</h3>
+							<div class="div_info_pts">
+								<p>Pts : </p>
+								<p>{{printInfo(24,1)}}</p>
+							</div>
+							<div class="div_info_plus">
+								<img src="./view/ressources/trombone.svg" alt="">
+								<p>{{printInfo(24,2)}}</p>
+							</div>
+							<p class="category_info">{{printInfo(24,3)}}</p>
+						</div>
+					</div>
 					<button class="button_point"></button>
 					<p class="titre">CakePHP</p>
 				</div>
 				<!-- front/back -->
-				<div class="point_container" id="net" :style="net">
+				<div class="point_container" id="net" :style="net" v-on:click="toggle25 = !toggle25">
+					<div class="infos_bulle_container" :class="{open : toggle25}" >
+						<div class="infos_bulle" >
+							<h3 class="titre_info">{{printInfo(25,0)}}</h3>
+							<div class="div_info_pts">
+								<p>Pts : </p>
+								<p>{{printInfo(25,1)}}</p>
+							</div>
+							<div class="div_info_plus">
+								<img src="./view/ressources/trombone.svg" alt="">
+								<p>{{printInfo(25,2)}}</p>
+							</div>
+							<p class="category_info">{{printInfo(25,3)}}</p>
+						</div>
+					</div>
 					<button class="button_point"></button>
 					<p class="titre">.Net</p>
 				</div>
 				<!-- Serveur -->
-				<div class="point_container" id="apache" :style="apache">
+				<div class="point_container" id="apache" :style="apache" v-on:click="toggle26 = !toggle26">
+					<div class="infos_bulle_container" :class="{open : toggle26}" >
+						<div class="infos_bulle" >
+							<h3 class="titre_info">{{printInfo(26,0)}}</h3>
+							<div class="div_info_pts">
+								<p>Pts : </p>
+								<p>{{printInfo(26,1)}}</p>
+							</div>
+							<div class="div_info_plus">
+								<img src="./view/ressources/trombone.svg" alt="">
+								<p>{{printInfo(26,2)}}</p>
+							</div>
+							<p class="category_info">{{printInfo(26,3)}}</p>
+						</div>
+					</div>
 					<button class="button_point"></button>
 					<p class="titre">Apache</p>
 				</div>
-				<div class="point_container" id="nginx" :style="nginx">
+				<div class="point_container" id="nginx" :style="nginx" v-on:click="toggle27 = !toggle27">
+					<div class="infos_bulle_container" :class="{open : toggle27}" >
+						<div class="infos_bulle" >
+							<h3 class="titre_info">{{printInfo(27,0)}}</h3>
+							<div class="div_info_pts">
+								<p>Pts : </p>
+								<p>{{printInfo(27,1)}}</p>
+							</div>
+							<div class="div_info_plus">
+								<img src="./view/ressources/trombone.svg" alt="">
+								<p>{{printInfo(27,2)}}</p>
+							</div>
+							<p class="category_info">{{printInfo(27,3)}}</p>
+						</div>
+					</div>
 					<button class="button_point"></button>
 					<p class="titre">Nginx</p>
 				</div>
-				<div class="point_container" id="iis" :style="iis">
+				<div class="point_container" id="iis" :style="iis" v-on:click="toggle28 = !toggle28">
+					<div class="infos_bulle_container" :class="{open : toggle28}" >
+						<div class="infos_bulle" >
+							<h3 class="titre_info">{{printInfo(28,0)}}</h3>
+							<div class="div_info_pts">
+								<p>Pts : </p>
+								<p>{{printInfo(28,1)}}</p>
+							</div>
+							<div class="div_info_plus">
+								<img src="./view/ressources/trombone.svg" alt="">
+								<p>{{printInfo(28,2)}}</p>
+							</div>
+							<p class="category_info">{{printInfo(28,3)}}</p>
+						</div>
+					</div>
 					<button class="button_point"></button>
 					<p class="titre">IIS</p>
 				</div>
 				<!-- BDD -->
-				<div class="point_container" id="mySQL" :style="mySQL">
+				<div class="point_container" id="mySQL" :style="mySQL" v-on:click="toggle29 = !toggle29">
+					<div class="infos_bulle_container" :class="{open : toggle29}" >
+						<div class="infos_bulle" >
+							<h3 class="titre_info">{{printInfo(29,0)}}</h3>
+							<div class="div_info_pts">
+								<p>Pts : </p>
+								<p>{{printInfo(29,1)}}</p>
+							</div>
+							<div class="div_info_plus">
+								<img src="./view/ressources/trombone.svg" alt="">
+								<p>{{printInfo(29,2)}}</p>
+							</div>
+							<p class="category_info">{{printInfo(29,3)}}</p>
+						</div>
+					</div>
 					<button class="button_point"></button>
 					<p class="titre">mySQL</p>
 				</div>
-				<div class="point_container" id="mongodb" :style="mongodb">
+				<div class="point_container" id="mongodb" :style="mongodb" v-on:click="toggle30 = !toggle30">
+					<div class="infos_bulle_container" :class="{open : toggle30}" >
+						<div class="infos_bulle" >
+							<h3 class="titre_info">{{printInfo(30,0)}}</h3>
+							<div class="div_info_pts">
+								<p>Pts : </p>
+								<p>{{printInfo(30,1)}}</p>
+							</div>
+							<div class="div_info_plus">
+								<img src="./view/ressources/trombone.svg" alt="">
+								<p>{{printInfo(30,2)}}</p>
+							</div>
+							<p class="category_info">{{printInfo(30,3)}}</p>
+						</div>
+					</div>
 					<button class="button_point"></button>
 					<p class="titre">MongoDB</p>
 				</div>
-				<div class="point_container" id="SQLServer" :style="SQLServer">
+				<div class="point_container" id="SQLServer" :style="SQLServer" v-on:click="toggle31 = !toggle31">
+					<div class="infos_bulle_container" :class="{open : toggle31}" >
+						<div class="infos_bulle" >
+							<h3 class="titre_info">{{printInfo(31,0)}}</h3>
+							<div class="div_info_pts">
+								<p>Pts : </p>
+								<p>{{printInfo(31,1)}}</p>
+							</div>
+							<div class="div_info_plus">
+								<img src="./view/ressources/trombone.svg" alt="">
+								<p>{{printInfo(31,2)}}</p>
+							</div>
+							<p class="category_info">{{printInfo(31,3)}}</p>
+						</div>
+					</div>
 					<button class="button_point"></button>
 					<p class="titre">SQLServer</p>
 				</div>
-				<div class="point_container" id="postgreSQL" :style="postgreSQL">
+				<div class="point_container" id="postgreSQL" :style="postgreSQL" v-on:click="toggle32 = !toggle32">
+					<div class="infos_bulle_container" :class="{open : toggle32}" >
+						<div class="infos_bulle" >
+							<h3 class="titre_info">{{printInfo(32,0)}}</h3>
+							<div class="div_info_pts">
+								<p>Pts : </p>
+								<p>{{printInfo(32,1)}}</p>
+							</div>
+							<div class="div_info_plus">
+								<img src="./view/ressources/trombone.svg" alt="">
+								<p>{{printInfo(32,2)}}</p>
+							</div>
+							<p class="category_info">{{printInfo(32,3)}}</p>
+						</div>
+					</div>
 					<button class="button_point"></button>
 					<p class="titre">PostgreSQL</p>
 				</div>
-				<div class="point_container" id="oracle" :style="oracle">
+				<div class="point_container" id="oracle" :style="oracle" v-on:click="toggle33 = !toggle33">
+					<div class="infos_bulle_container" :class="{open : toggle33}" >
+						<div class="infos_bulle" >
+							<h3 class="titre_info">{{printInfo(33,0)}}</h3>
+							<div class="div_info_pts">
+								<p>Pts : </p>
+								<p>{{printInfo(33,1)}}</p>
+							</div>
+							<div class="div_info_plus">
+								<img src="./view/ressources/trombone.svg" alt="">
+								<p>{{printInfo(33,2)}}</p>
+							</div>
+							<p class="category_info">{{printInfo(33,3)}}</p>
+						</div>
+					</div>
 					<button class="button_point"></button>
 					<p class="titre">Oracle</p>
 				</div>
 				<!-- Outils -->
-				<div class="point_container" id="adobeFlash" :style="adobeFlash">
+				<div class="point_container" id="adobeFlash" :style="adobeFlash" v-on:click="toggle34 = !toggle34">
+					<div class="infos_bulle_container" :class="{open : toggle34}" >
+						<div class="infos_bulle" >
+							<h3 class="titre_info">{{printInfo(34,0)}}</h3>
+							<div class="div_info_pts">
+								<p>Pts : </p>
+								<p>{{printInfo(34,1)}}</p>
+							</div>
+							<div class="div_info_plus">
+								<img src="./view/ressources/trombone.svg" alt="">
+								<p>{{printInfo(34,2)}}</p>
+							</div>
+							<p class="category_info">{{printInfo(34,3)}}</p>
+						</div>
+					</div>
 					<button class="button_point"></button>
 					<p class="titre">Adobe Flash</p>
 				</div>
-				<div class="point_container" id="wordpress" :style="wordpress">
+				<div class="point_container" id="wordpress" :style="wordpress" v-on:click="toggle35 = !toggle35">
+					<div class="infos_bulle_container" :class="{open : toggle35}" >
+						<div class="infos_bulle" >
+							<h3 class="titre_info">{{printInfo(35,0)}}</h3>
+							<div class="div_info_pts">
+								<p>Pts : </p>
+								<p>{{printInfo(35,1)}}</p>
+							</div>
+							<div class="div_info_plus">
+								<img src="./view/ressources/trombone.svg" alt="">
+								<p>{{printInfo(35,2)}}</p>
+							</div>
+							<p class="category_info">{{printInfo(35,3)}}</p>
+						</div>
+					</div>
 					<button class="button_point"></button>
 					<p class="titre">Wordpress</p>
 				</div>
-				<div class="point_container" id="shopify" :style="shopify">
+				<div class="point_container" id="shopify" :style="shopify" v-on:click="toggle36 = !toggle36">
+					<div class="infos_bulle_container" :class="{open : toggle36}" >
+						<div class="infos_bulle" >
+							<h3 class="titre_info">{{printInfo(36,0)}}</h3>
+							<div class="div_info_pts">
+								<p>Pts : </p>
+								<p>{{printInfo(36,1)}}</p>
+							</div>
+							<div class="div_info_plus">
+								<img src="./view/ressources/trombone.svg" alt="">
+								<p>{{printInfo(36,2)}}</p>
+							</div>
+							<p class="category_info">{{printInfo(36,3)}}</p>
+						</div>
+					</div>
 					<button class="button_point"></button>
 					<p class="titre">Shopify</p>
 				</div>
-				<div class="point_container" id="joomla" :style="joomla">
+				<div class="point_container" id="joomla" :style="joomla" v-on:click="toggle37 = !toggle37">
+					<div class="infos_bulle_container" :class="{open : toggle37}" >
+						<div class="infos_bulle" >
+							<h3 class="titre_info">{{printInfo(37,0)}}</h3>
+							<div class="div_info_pts">
+								<p>Pts : </p>
+								<p>{{printInfo(37,1)}}</p>
+							</div>
+							<div class="div_info_plus">
+								<img src="./view/ressources/trombone.svg" alt="">
+								<p>{{printInfo(37,2)}}</p>
+							</div>
+							<p class="category_info">{{printInfo(37,3)}}</p>
+						</div>
+					</div>
 					<button class="button_point"></button>
 					<p class="titre">Joomla</p>
 				</div>
-				<div class="point_container" id="nodejs" :style="nodejs">
+				<div class="point_container" id="nodejs" :style="nodejs" v-on:click="toggle38 = !toggle38">
+					<div class="infos_bulle_container" :class="{open : toggle38}" >
+						<div class="infos_bulle" >
+							<h3 class="titre_info">{{printInfo(38,0)}}</h3>
+							<div class="div_info_pts">
+								<p>Pts : </p>
+								<p>{{printInfo(38,1)}}</p>
+							</div>
+							<div class="div_info_plus">
+								<img src="./view/ressources/trombone.svg" alt="">
+								<p>{{printInfo(38,2)}}</p>
+							</div>
+							<p class="category_info">{{printInfo(38,3)}}</p>
+						</div>
+					</div>
 					<button class="button_point"></button>
 					<p class="titre">NodeJS</p>
 				</div>
-				<div class="point_container" id="lowCode" :style="lowCode">
+				<div class="point_container" id="lowCode" :style="lowCode" v-on:click="toggle39 = !toggle39">
+					<div class="infos_bulle_container" :class="{open : toggle39}" >
+						<div class="infos_bulle" >
+							<h3 class="titre_info">{{printInfo(39,0)}}</h3>
+							<div class="div_info_pts">
+								<p>Pts : </p>
+								<p>{{printInfo(39,1)}}</p>
+							</div>
+							<div class="div_info_plus">
+								<img src="./view/ressources/trombone.svg" alt="">
+								<p>{{printInfo(39,2)}}</p>
+							</div>
+							<p class="category_info">{{printInfo(39,3)}}</p>
+						</div>
+					</div>
 					<button class="button_point"></button>
 					<p class="titre">Low / No Code</p>
 				</div>
-				<div class="point_container" id="git" :style="git">
+				<div class="point_container" id="git" :style="git" v-on:click="toggle40 = !toggle40">
+					<div class="infos_bulle_container" :class="{open : toggle40}" >
+						<div class="infos_bulle" >
+							<h3 class="titre_info">{{printInfo(40,0)}}</h3>
+							<div class="div_info_pts">
+								<p>Pts : </p>
+								<p>{{printInfo(40,1)}}</p>
+							</div>
+							<div class="div_info_plus">
+								<img src="./view/ressources/trombone.svg" alt="">
+								<p>{{printInfo(40,2)}}</p>
+							</div>
+							<p class="category_info">{{printInfo(40,3)}}</p>
+						</div>
+					</div>
 					<button class="button_point"></button>
 					<p class="titre">Git</p>
 				</div>
 			</div>
 			<img id="legende" src="./view/ressources/legende.svg" alt="">
 			<div class="bar_container">
-				<input v-model="timeBar" type="range" id="time_bar" @change="fetchData()" name="time" min="1" max="4">
+				<input v-model="timeBar" type="range" id="time_bar" @change="fetchData(); chargeInfo()" name="time" min="1" max="4">
 				<div class="marckers_line">
 					<div class="marcker_line">
 						<span class="bar_2004"></span>

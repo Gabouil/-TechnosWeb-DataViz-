@@ -6,12 +6,59 @@ new Vue({
         bottom : [],
         left : [],
         coef : 90,
+
+        infos : [],
+        info : [],
+
+        toggle0 : false,
+        toggle1 : false,
+        toggle2 : false,
+        toggle3 : false,
+        toggle4 : false,
+        toggle5 : false,
+        toggle6 : false,
+        toggle7 : false,
+        toggle8 : false,
+        toggle9 : false,
+        toggle10 : false,
+        toggle11 : false,
+        toggle12 : false,
+        toggle13 : false,
+        toggle14 : false,
+        toggle15 : false,
+        toggle16 : false,
+        toggle17 : false,
+        toggle18 : false,
+        toggle19 : false,
+        toggle20 : false,
+        toggle21 : false,
+        toggle22 : false,
+        toggle23 : false,
+        toggle24 : false,
+        toggle25 : false,
+        toggle26 : false,
+        toggle27 : false,
+        toggle28 : false,
+        toggle29 : false,
+        toggle30 : false,
+        toggle31 : false,
+        toggle32 : false,
+        toggle33 : false,
+        toggle34 : false,
+        toggle35 : false,
+        toggle36 : false,
+        toggle37 : false,
+        toggle38 : false,
+        toggle39 : false,
+        toggle40 : false,
+        toggle41 : false,
     },
     created() {
         this.fetchData();
+        this.chargeInfo()
     },
     methods: {
-        fetchData() {
+        fetchData : function() {
             var ourResquest = new XMLHttpRequest()
             ourResquest.open('GET', "https://datavisual1.000webhostapp.com/api_test/api/info/lecture.php")
             ourResquest.onload = () => {
@@ -89,10 +136,101 @@ new Vue({
                         }
                     });
                 }
-                console.log(ourData)
             }
             ourResquest.send()
-        }
+        },
+        chargeInfo : function() {
+            var ourResquest = new XMLHttpRequest()
+            ourResquest.open('GET', "https://datavisual1.000webhostapp.com/api_test/api/info/lecture.php")
+            ourResquest.onload = () => {
+                var ourData = JSON.parse(ourResquest.responseText)
+                ourData = ourData['data']
+                this.infos = []
+                if(this.timeBar == 1) {
+                    ourData.forEach(data => {
+                        this.info = []
+                        this.info.push(data["Name"])
+                        if(data["totale_users_year_2004"] > 1000000) {
+                            this.info.push(Number(data["totale_users_year_2004"] / 1000000) + "M")
+                        }else if(data["totale_users_year_2004"] > 1000) {
+                            this.info.push(Number(data["totale_users_year_2004"] / 1000) + "K")
+                        }
+                        
+                        if(data["croissance_decroissance_2004"] > 0) {
+                            this.info.push("+" + data["croissance_decroissance_2004"] + "%")
+                        }else {
+                            this.info.push(data["croissance_decroissance_2004"] + "%")
+                        }
+                        this.info.push(data["category_name"])
+
+                        this.infos.push(this.info)
+                    });
+                }else if(this.timeBar == 2) {
+                    ourData.forEach(data => {
+                        this.info = []
+                        this.info.push(data["Name"])
+                        if(data["totale_users_year_2012"] > 1000000) {
+                            this.info.push(Number(data["totale_users_year_2012"] / 1000000) + "M")
+                        }else if(data["totale_users_year_2012"] > 1000) {
+                            this.info.push(Number(data["totale_users_year_2012"] / 1000) + "K")
+                        }
+                        
+                        if(data["croissance_decroissance_2012"] > 0) {
+                            this.info.push("+" + data["croissance_decroissance_2012"] + "%")
+                        }else {
+                            this.info.push(data["croissance_decroissance_2012"] + "%")
+                        }
+                        this.info.push(data["category_name"])
+
+                        this.infos.push(this.info)
+                    });
+                }else if(this.timeBar == 3) {
+                    ourData.forEach(data => {
+                        this.info = []
+                        this.info.push(data["Name"])
+                        if(data["totale_users_year_2017"] > 1000000) {
+                            this.info.push(Number(data["totale_users_year_2017"] / 1000000) + "M")
+                        }else if(data["totale_users_year_2017"] > 1000) {
+                            this.info.push(Number(data["totale_users_year_2017"] / 1000) + "K")
+                        }
+                        
+                        if(data["croissance_decroissance_2017"] > 0) {
+                            this.info.push("+" + data["croissance_decroissance_2017"] + "%")
+                        }else {
+                            this.info.push(data["croissance_decroissance_2017"] + "%")
+                        }
+                        this.info.push(data["category_name"])
+
+                        this.infos.push(this.info)
+                    });
+                }else if(this.timeBar == 4) {
+                    ourData.forEach(data => {
+                        this.info = []
+                        this.info.push(data["Name"])
+                        if(data["totale_users_year_2020"] > 1000000) {
+                            this.info.push(Number(data["totale_users_year_2020"] / 1000000) + "M")
+                        }else if(data["totale_users_year_2020"] > 1000) {
+                            this.info.push(Number(data["totale_users_year_2020"] / 1000) + "K")
+                        }
+                        
+                        if(data["croissance_decroissance_2020"] > 0) {
+                            this.info.push("+" + data["croissance_decroissance_2020"] + "%")
+                        }else {
+                            this.info.push(data["croissance_decroissance_2020"] + "%")
+                        }
+                        this.info.push(data["category_name"])
+
+                        this.infos.push(this.info)
+                    });
+                }
+            }
+            ourResquest.send()
+        },
+        printInfo : function(id, id_type) {
+            if(this.infos.length > 1) {
+                return this.infos[id][id_type];
+            }
+        },
     },
     computed: {
         // langage

@@ -114,16 +114,3 @@ function change() {
     testColorPoint()
 }
 timeBar.onchange = change
-
-timeBar.onchange.addEventListener('mousedown', function(){
-    setTimeout(function(){ testColorPoint(); }, 1000);;
-})
-timeBar.addEventListener('mouseup', function(){
-    setTimeout(function(){ testColorPoint(); }, 1000);;
-})
-timeBar.addEventListener('touchstart', function(){
-    setTimeout(function(){ testColorPoint(); }, 1000);;
-})
-timeBar.addEventListener('touchend', function(){
-    setTimeout(function(){ testColorPoint(); }, 1000);;
-})
