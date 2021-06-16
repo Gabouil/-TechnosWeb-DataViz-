@@ -254,7 +254,7 @@ main {
 
 .infos_bulle_container {
     z-index: 5;
-    width: 100%;
+    width: 150px;
     height: 100%;
     display: none;
 
@@ -474,6 +474,9 @@ input[type=range]#time_bar::-ms-thumb {
 }
 
 @media screen and ( max-width: 440px) {
+    .infos_bulle {
+        display: none !important;
+    }
     #button_night {
         display: none;
     }
@@ -579,6 +582,213 @@ input[type=range]#time_bar::-ms-thumb {
         transform: translate(-50%, 40%);
         display: flex;
         width: 69%;
+        justify-content: space-between;
+    }
+}
+
+@media screen and ( min-width: 441px) and (max-width: 730px){
+    .infos_bulle {
+        display: none !important;
+    }
+    #button_night {
+        display: none;
+    }
+    .titre_container h1{
+        font-size: 29px;
+        margin-bottom: 10px;
+    }
+    .titre_container h2{
+        font-size: 25px;
+    }
+
+    /* placement de plus d'info */
+    .plus_info img{
+        width: 100px;
+    }
+    .page_container {
+        grid-template-columns: 0.2fr 1fr 0.2fr;
+        grid-template-rows: 0.2fr 1fr 0.2fr 0.1fr 0.2fr;
+        grid-template-areas: 
+        ". titre ."
+        ". nuage ."
+        ". select ."
+        ". bar ."
+        ". plusInfo ."
+        ;
+    }
+    /* gestion du Quadrant */
+    .nuage_container {
+        height: 400px;
+        font-size: 25px;
+    }
+    #legende {
+        width: 400px;
+        top: 60%;
+        right: -330px;
+    }
+
+    /* gestion des catégorie du quadrant */
+    .class_categorie {
+        font-size: 25px;
+    }
+    .canvas_color_point {
+        height: 47%;
+        width: 47%;
+    }
+
+    .titre_croissance {
+        right: -60px;
+        top: 50%;
+        transform: translateY(-40%) rotate(90deg);
+    }
+
+    /* gestion du selecteur */
+
+    .selecteur_container {
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .selecteurs {
+        width: 400px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: start;
+    }
+    .selecteur {
+        margin-bottom: 5px;
+        padding-bottom: 0px;
+        margin-right: 1px;
+        margin-left: 1px;
+        height: 30px;
+        width: 80px;
+        border-radius: 15px;
+        border: 1px solid #1E1E1E;
+    }
+    .selecteur_recharge {
+        width: 30px;
+        cursor: pointer;
+        background: none;
+        border: none;
+    }
+
+    /* géstion de la bare de défillement */
+    #time_bar {
+        width: 100%;
+        z-index: 2;
+    }
+    .marckers_line {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 40%);
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+@media screen and ( min-width: 731px) and (max-width: 1200px){
+    #button_night {
+        display: none;
+    }
+    .titre_container h1{
+        font-size: 29px;
+        margin-bottom: 10px;
+    }
+    .titre_container h2{
+        font-size: 25px;
+    }
+
+    /* placement de plus d'info */
+    .plus_info img{
+        width: 100px;
+    }
+    .page_container {
+        grid-template-columns: 0.2fr 1fr 0.2fr;
+        grid-template-rows: 0.2fr 1fr 0.2fr 0.1fr 0.2fr;
+        grid-template-areas: 
+        ". titre ."
+        ". nuage ."
+        ". select ."
+        ". bar ."
+        ". plusInfo ."
+        ;
+    }
+    /* gestion du Quadrant */
+    .nuage_container {
+        height: 400px;
+        font-size: 25px;
+    }
+    #legende {
+        width: 400px;
+        top: 60%;
+        right: -330px;
+    }
+
+    /* gestion des catégorie du quadrant */
+    .class_categorie {
+        font-size: 25px;
+    }
+    .canvas_color_point {
+        height: 47%;
+        width: 47%;
+    }
+
+    .titre_croissance {
+        right: -60px;
+        top: 50%;
+        transform: translateY(-40%) rotate(90deg);
+    }
+
+    /* gestion du selecteur */
+
+    .selecteur_container {
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .selecteurs {
+        width: 600px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .selecteur {
+        margin-bottom: 5px;
+        padding-bottom: 0px;
+        height: 30px;
+        width: 80px;
+        border-radius: 15px;
+        border: 1px solid #1E1E1E;
+        justify-content: space-between;
+    }
+    .selecteur_recharge {
+        width: 30px;
+        cursor: pointer;
+        background: none;
+        border: none;
+    }
+
+    /* géstion de la bare de défillement */
+    #time_bar {
+        width: 100%;
+        z-index: 2;
+    }
+    .marckers_line {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 40%);
+        display: flex;
+        width: 100%;
         justify-content: space-between;
     }
 }
