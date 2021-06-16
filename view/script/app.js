@@ -46,6 +46,7 @@ const canvaEmergeant = document.getElementById("canvas_emergeant")
 var points = document.querySelectorAll(".button_point")
 
 function elementPosition (a) {
+    points = document.querySelectorAll(".button_point")
     var b = a.getBoundingClientRect();
     return {
       clientX: a.offsetLeft,

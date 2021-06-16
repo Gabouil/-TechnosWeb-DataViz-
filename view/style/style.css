@@ -155,6 +155,8 @@ main {
     font-size: 25px;
 }
 
+
+
 #legende {
     cursor: pointer;
     position: absolute;
@@ -168,7 +170,7 @@ main {
 .point_container {
     position: absolute;
     transition: 1s;
-    display: flex;
+    display: none !important;
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -182,6 +184,10 @@ main {
     background-color: #E2E0D9;
     border-radius: 15px;
     transition: none;
+}
+
+.nuage_container.is-visible .point_container {
+    display: flex !important;
 }
 
 .titre {
@@ -342,29 +348,8 @@ main {
     color: #fff;
 }
 
-.selectNoneFront {
-    display: none !important;
-}
-.selectNoneBack {
-    display: none !important;
-}
-.selectNoneFrontBack {
-    display: none !important;
-}
-.selectNoneLangage {
-    display: none !important;
-}
-.selectNoneFramework {
-    display: none !important;
-}
-.selectNoneOutil {
-    display: none !important;
-}
-.selectNoneServeur {
-    display: none !important;
-}
-.selectNoneBDD {
-    display: none !important;
+.selectVisible {
+    display: flex !important;
 }
 /* géstion de la bare de défillement */
 
@@ -508,6 +493,8 @@ input[type=range]#time_bar::-ms-thumb {
         height: 350px;
         font-size: 25px;
     }
+
+
     .button_point {
         height: 8px;
         width: 8px;
