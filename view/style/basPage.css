@@ -29,7 +29,6 @@
         font-size: 1em;
         font-weight:normal;
         text-align: center;
-        padding-left: 5%;
     }
     .infosScroll span {
         display: block;
@@ -51,8 +50,8 @@
         background: black;
         position: absolute;
         bottom: 8%;
-        left: 25%;
         transform: rotate(-2deg);
+        left: 35%;
     }
     /* ---------------------------------- Les Sections ---------------------------------- */
     /* Graphique Pie */
@@ -66,7 +65,6 @@
         position: relative;
         width: 1000px;
         top: 0;
-        left: -380px;
         z-index:-1
     }
     #piechart {
@@ -75,7 +73,6 @@
         height: 550px;
         border-bottom: 100px;
         top: -100px;
-        left: -260px
     }
     #piechartresp {
         display:none
@@ -85,25 +82,21 @@
         color: white;
         position: absolute;
         top: 20vh;
-        left: 60px
     }
     #pielabel2 {
         color: white;
         position: absolute;
         top: 25vh;
-        left: 200px
     }
     #pielabel3 {
         color: white;
         position: absolute;
         top: 30vh;
-        left: 200px
     }
     #pielabel4 {
         color: white;
         position: absolute;
         top: 40vh;
-        left: 60px
     }
     /* Message de détail */
     #detail1 {
@@ -140,13 +133,11 @@
         color: white;
         padding-left: 10px ;
         padding-top: 5px ;
-        margin-left: 60px;
         margin-top: 100px
     }
     #rect1::after {
         content: "32%";
         position: absolute;
-        left:102%;
         top: 5px;
         z-index: 1000;
         color: #1E1E1E;
@@ -159,12 +150,10 @@
         color: white;
         padding-left: 10px ;
         padding-top: 5px ;
-        margin-left: 60px;
     }
     #rect2::after {
         content: "25%";
         position: absolute;
-        left:102%;
         top: 5px;
         color: #1E1E1E;
     }
@@ -176,12 +165,10 @@
         color: white;
         padding-left: 10px ;
         padding-top: 5px ;
-        margin-left: 60px;
     }
     #rect3::after {
         content: "20%";
         position: absolute;
-        left:102%;
         top: 5px;
         color: #1E1E1E;
     }
@@ -194,12 +181,10 @@
         padding-left: 10px ;
         padding-top: 5px ;
         margin-bottom: 50px;
-        margin-left: 60px;
     }
     #rect4::after {
         content: "13%";
         position: absolute;
-        left:102%;
         top: 5px;
         color: #1E1E1E;
     }
@@ -208,7 +193,6 @@
         position: absolute;
         top: 400px;
         padding: 0 50px;
-        left: -52px;
         text-align: left!important;
     }
     #section74 {
@@ -255,7 +239,6 @@
         top: 100px;
         width:100%;
         height: 100px;
-        margin: 10% 10%;
     }
     .titre24M {
         position: absolute;
@@ -269,7 +252,6 @@
         padding: 0 50px;
         margin:0 ;
         text-align: left!important;
-        left: 7px;
         top:45px;
     }
 
@@ -311,8 +293,8 @@
         background: black;
         position: absolute;
         bottom: 8%;
-        left: 25%;
         transform: rotate(-2deg);
+        left: 35%;
     }
     /* Graphique Pie */
     #sectionPie {
@@ -333,7 +315,7 @@
         position: relative;
         display: block;
         width: 250px;
-        left: 20px
+        top: 50px;
     }
     #section74 {
         position: relative;
@@ -347,9 +329,7 @@
     .text74 {
         position: absolute;
         display: block;
-        padding: 0 50px;
         text-align: left!important;
-        left: 7px;
     }
     
 
@@ -359,9 +339,9 @@
         display: inline-block;
         position: relative;
         z-index: 10;
-        bottom: 0vh;
+        bottom: -20px;
         right: -1;
-        padding-left: 20px;
+        padding-left: 0px;
         text-align: left;
         align-self: center;
         width: 200px;
@@ -391,9 +371,9 @@
         display: block;
         position: absolute;
         top: 310px;
-        padding: 0 50px;
-        left: 7px;
         text-align: left!important;
+        align-self: center;
+        width: 280px;
     }
     /* Lien */
     .sectionlien {
@@ -464,8 +444,8 @@
         background: black;
         position: absolute;
         bottom: 8%;
-        left: 38%;
         transform: rotate(-2deg);
+        left: 35%;
     }
     /* Par sections */
     .section63 {
@@ -473,7 +453,6 @@
         top: 100px;
         width:100%;
         height: 300px;
-        margin: 10% 10%;
     }
     .titre63 {
         position: absolute;
@@ -486,7 +465,6 @@
         padding: 0 50px;
         margin:0 ;
         text-align: left!important;
-        left: 7px;
         top:45px;
     }
 
@@ -495,7 +473,6 @@
         top: 0px;
         width:100%;
         height: 300px;
-        margin: 10% 10%;
     }
     .titre7M {
         position: absolute;
@@ -507,7 +484,6 @@
         padding: 0 50px;
         margin:0 ;
         text-align: left!important;
-        left: 7px;
         top:45px;
     }
     .section69 {
@@ -515,7 +491,6 @@
         top: -100px;
         width:100%;
         height: 300px;
-        margin: 10% 10%;
     }
     .titre69 {
         position: absolute;
@@ -527,7 +502,6 @@
         padding: 0 50px;
         margin:0 ;
         text-align: left!important;
-        left: 7px;
         top:45px;
     }
     .sectionCourbe {
@@ -538,7 +512,6 @@
     #graph2012resp {
         width:70%;
         position:absolute;
-        left:45px
     }
     #graph2012 {
         display: none;
@@ -608,8 +581,8 @@
         background: black;
         position: absolute;
         bottom: 8%;
-        left: 20%;
         transform: rotate(-2deg);
+        left: 35%;
     }
 
 /*----------------- Par sections ----------------- */
@@ -624,8 +597,6 @@
         width:100%;
         height:100%;
         position:absolute;
-        padding:50px;
-        left: 48px;
     }
     #graph2017_1 {
         display: none;
@@ -635,7 +606,6 @@
         top: 50px;
         width:100%;
         height: 300px;
-        margin: 10% 10%;
     }
     .titre119 {
         position: absolute;
@@ -648,7 +618,6 @@
         padding: 0 50px;
         margin:0 ;
         text-align: left!important;
-        left: 7px;
         top:45px;
     }
     .section2017_2 {
@@ -657,10 +626,11 @@
         top: 0px;
     }
     #graph2017_2Resp {
+        bottom: 0;
         display: block;
-        height:100%;
+        height: 80%;
         position:absolute;
-        left:90px;
+        right: -5%;
 
     }
     #graph2017_2 {
@@ -671,7 +641,6 @@
         top: 100px;
         width:100%;
         height: 300px;
-        margin: 10% 10%;
     }
     .titre44 {
         position: absolute;
@@ -684,7 +653,6 @@
         padding: 0 50px;
         margin:0 ;
         text-align: left!important;
-        left: 7px;
         top:45px;
     }
     .section2017_3 {
@@ -697,7 +665,6 @@
         width:100%;
         height:100%;
         position:absolute;
-        left: 0px;
         padding: 20px;
     }
     #graph2017_3 {
@@ -769,8 +736,8 @@
         background: black;
         position: absolute;
         bottom: 8%;
-        left: 38%;
         transform: rotate(-2deg);
+        left: 35%;
     }
 
 /*----------------- Par sections ----------------- */
@@ -779,7 +746,6 @@
         top: 100px;
         width:100%;
         height: 300px;
-        margin: 10% 10%;
     }
     .titre79 {
         position: absolute;
@@ -792,7 +758,6 @@
         padding: 0 50px;
         margin:0 ;
         text-align: left!important;
-        left: 7px;
         top:45px;
     }
     .section344 {
@@ -800,7 +765,6 @@
         top: 50px;
         width:100%;
         height: 300px;
-        margin: 10% 10%;
     }
     .titre344 {
         position: absolute;
@@ -813,14 +777,12 @@
         padding: 0 50px;
         margin:0 ;
         text-align: left!important;
-        left: 7px;
         top:0px;
     }
     .section2020 {
         position:relative;
         height: 350px;
         top: 0px;
-        left: -37px;
     }
    #graph2020 {
         position:relative;
@@ -829,9 +791,9 @@
     }
     #graph2020Resp {
         display: block;
-        height:100%;
+        height:80%;
         position:absolute;
-        left:45px;
+        left: -5%;
     }
     #graph2020 {
         display: none;
@@ -840,8 +802,7 @@
         position: relative;
         top: 0px;
         width:100%;
-        height: 300px;
-        margin: 10% 10%;       
+        height: 300px;     
     }
     .titre31Md {
         position: absolute;
@@ -854,7 +815,6 @@
         padding: 0 50px;
         margin:0 ;
         text-align: left!important;
-        left: 7px;
         top:145px;
     }
     .section2012 {
@@ -862,7 +822,6 @@
         top: -50px;
         width:100%;
         height: 300px;
-        margin: 10% 10%;
     }
     .titre2012 {
         position: absolute;
@@ -875,7 +834,6 @@
         padding: 0 50px;
         margin:0 ;
         text-align: left!important;
-        left: 7px;
         top:145px;
     }
     
