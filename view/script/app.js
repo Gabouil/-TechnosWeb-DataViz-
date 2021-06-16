@@ -105,7 +105,7 @@ function testColorPoint() {
 
 const selectFront = document.getElementById("select_front")
 const selectBack = document.getElementById("select_back")
-const selectFrontBack = document.getElementById("select_front_back")
+const selectBDD = document.getElementById("select_BDD")
 const selectLangage = document.getElementById("select_langage")
 const selectFramework = document.getElementById("select_framework")
 const selectOutil = document.getElementById("select_outil")
@@ -128,7 +128,7 @@ selectFront.addEventListener('click', e => {
 selectBack.addEventListener('click', e => {
     setTimeout(function(){ testColorPoint(); }, 500);
 });
-selectFrontBack.addEventListener('click', e => {
+selectBDD.addEventListener('click', e => {
     setTimeout(function(){ testColorPoint(); }, 500);
 });
 selectLangage.addEventListener('click', e => {
