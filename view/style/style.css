@@ -463,6 +463,9 @@ input[type=range]#time_bar::-ms-thumb {
 
 
 @media screen and ( max-width: 440px) {
+    #mon_app {
+        overflow-x: visible;
+    }
     .infos_bulle {
         display: none !important;
     }
@@ -480,6 +483,7 @@ input[type=range]#time_bar::-ms-thumb {
     /* placement de plus d'info */
     .plus_info img{
         width: 100px;
+        margin-top: 50px;
     }
     .page_container {
         grid-template-columns: 0.2fr 1fr 0.2fr;
@@ -792,7 +796,6 @@ input[type=range]#time_bar::-ms-thumb {
 /* gestion du bas de page */
 .main_page {
     width: 100vw;
-    overflow-x: hidden;
 }
 
 footer {
