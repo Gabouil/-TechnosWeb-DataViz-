@@ -572,6 +572,10 @@ input[type=range]#time_bar::-ms-thumb {
         width: 69%;
         justify-content: space-between;
     }
+    footer {
+        width: 80vw;
+        margin-top: 120%;
+    }
 }
 
 @media screen and ( min-width: 441px) and (max-width: 730px){
@@ -785,5 +789,16 @@ input[type=range]#time_bar::-ms-thumb {
 
 /* gestion du bas de page */
 .main_page {
+    width: 100vw;
+    overflow-x: none;
+}
 
+footer {
+    width: 100vw;
+    position: relative;
+}
+footer p{
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
 }
