@@ -1,4 +1,6 @@
+/* Container */
 .infosScroll {
+    font-size: 1em;
     margin: 150px 20%;
     display: flex;
     flex-direction: column;
@@ -6,18 +8,215 @@
     row-gap: 150px;
     align-content: center;
 }
+/* texts */
 .infosScroll section {
-    font-size: 2em;
+    font-size: 4em;
+    margin-bottom: 100px;
+    margin-top: 100px;
 }
-.infosScroll section em::before {
-    position:absolute;
-    content:"";
-    width: 100px;
-    height: auto;
-    position: absolute;
-    z-index: -1;
-    background-color: yellow;
+.infosScroll h1 {
+    font-size: 3em;
+    font-weight:400;
+    text-align: center;
+    margin-bottom: 10px;
+    position: relative;
+
 }
+.infosScroll p {
+    font-size: 1em;
+    font-weight:normal;
+    text-align: center;
+    padding-left: 5%;
+}
+.infosScroll span {
+    display: block;
+    width: 200px;
+    font-weight:normal;
+    text-align: right;
+}
+
+/* Marqueur jaune */
+.infosScroll section em {
+    background-color: rgb(238, 238, 153);
+}
+/* sous lignement */
+.infosScroll .line:after {
+    display: block;
+      content: '';
+     width: 50%;
+     height: 1px;
+     background: black;
+     position: absolute;
+     bottom: 8%;
+     left: 25%;
+     transform: rotate(-2deg);
+   }
+/* Graphique Pie */
 #pie1 {
-    height: 200px;
-  }
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+#fichePie {
+    position: relative;
+    width: 1000px;
+    top: 0;
+    left: -380px;
+    z-index:-1
+}
+#mapie {
+    position: absolute;
+    transform: rotate(-60deg);
+    height: 450px;
+    border-bottom: 100px;
+    bottom: 23vh;
+    left: -200px
+}
+/* Labels */
+#pielabel1 {
+    color: white;
+    position: absolute;
+    top: 20vh;
+    left: 60px
+}
+#pielabel2 {
+    color: white;
+    position: absolute;
+    top: 25vh;
+    left: 200px
+}
+#pielabel3 {
+    color: white;
+    position: absolute;
+    top: 30vh;
+    left: 200px
+}
+#pielabel4 {
+    color: white;
+    position: absolute;
+    top: 40vh;
+    left: 60px
+}
+/* Message de détail */
+#detail1 {
+    display: inline-block;
+    position: relative;
+    z-index: 10;
+    bottom: 40vh;
+    right: -55%;
+    text-align: right;
+    align-self: center;
+    width: 450px;
+
+}
+#Franke {
+    position: absolute;
+    bottom: 35vh;
+    right: -10%;
+}
+/*  Rect */
+#flexrect {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+#rect1 {
+    position: relative;
+    height: 50px;
+    width: 1000px;
+    background-color: #1E1E1E;
+    color: white;
+    padding-left: 10px ;
+    padding-top: 5px ;
+    margin-left: 60px;
+    margin-top: 100px
+}
+#rect1::after {
+    content: "32%";
+    position: absolute;
+    left:102%;
+    top: 5px;
+    z-index: 1000;
+    color: #1E1E1E;
+}
+#rect2 {
+    position: relative;
+    height: 50px;
+    width: 750px;
+    background-color: #1E1E1E;
+    color: white;
+    padding-left: 10px ;
+    padding-top: 5px ;
+    margin-left: 60px;
+}
+#rect2::after {
+    content: "25%";
+    position: absolute;
+    left:102%;
+    top: 5px;
+    color: #1E1E1E;
+}
+#rect3 {
+    position: relative;
+    height: 50px;
+    width: 600px;
+    background-color: #1E1E1E;
+    color: white;
+    padding-left: 10px ;
+    padding-top: 5px ;
+    margin-left: 60px;
+}
+#rect3::after {
+    content: "20%";
+    position: absolute;
+    left:102%;
+    top: 5px;
+    color: #1E1E1E;
+}
+#rect4 {
+    position: relative;
+    height: 50px;
+    width: 400px;
+    background-color: #1E1E1E;
+    color: white;
+    padding-left: 10px ;
+    padding-top: 5px ;
+    margin-bottom: 50px;
+    margin-left: 60px;
+}
+#rect4::after {
+    content: "13%";
+    position: absolute;
+    left:102%;
+    top: 5px;
+    color: #1E1E1E;
+}
+/* Lien */
+a.return {
+    font-size: 4em;
+    color: #1E1E1E;
+    border: 1px #1E1E1E solid;
+    width: fit-content;
+    padding: 2px 5px;
+    align-self: center;
+    margin-top: 100px;
+}
+
+@media screen and ( max-width: 440px) {
+    #fichePie {
+        position: relative;
+        width: 500px;
+        top: 0;
+        left: -30px;
+        z-index:-1
+    }
+
+    #mapie {
+        height: 200px;
+        bottom: 50px;
+        left: 25px
+    }
+
+}
