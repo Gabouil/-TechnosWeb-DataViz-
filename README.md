@@ -317,3 +317,7 @@ Simple et explicite, le designer design, le développeur développe. Sortir de c
 ### Gestion du temps en priorité :
 L'unique ligne rouge est composée de l'organisation du projet, des délais et de l'ordre des tâches. 
 Si une feature arrive tard, on s'adapte et on downgrade pour rentrer dans les clous.
+
+# MERCI ET BONNE VISITE !
+
+![alt text](https://raw.githubusercontent.com/Eyvve/doriancanonne.dev/main/Images/Projet%20datavis/Equipe11.png)
