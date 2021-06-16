@@ -341,6 +341,12 @@ new Vue({
                 return {
                     display : "none"
                 }
+            }else if(this.timeBar == 1) {
+                return {
+                    display : "flex",
+                    bottom : "90%",
+                    left : this.left[4] + "%"
+                }
             }else {
                 return {
                     display : "flex",
@@ -431,6 +437,12 @@ new Vue({
             if(this.bottom[9] == 0) {
                 return {
                     display : "none"
+                }
+            }else if(this.timeBar == 1) {
+                return {
+                    display : "flex",
+                    bottom : Number(this.bottom[9] - 2) + "%",
+                    left : Number(this.left[9] - 2) + "%"
                 }
             }else {
                 return {
