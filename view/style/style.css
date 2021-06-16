@@ -341,6 +341,9 @@ main {
 .selectNoneServeur {
     display: none !important;
 }
+.selectNoneBDD {
+    display: none !important;
+}
 /* géstion de la bare de défillement */
 
 

@@ -67,6 +67,7 @@ new Vue({
         toggleFramework : true,
         toggleOutil : true,
         toggleServeur : true,
+        toggleBDD : true,
 
     },
     created() {
@@ -248,9 +249,6 @@ new Vue({
             }
         },
         refreshBulle : function() {
-            if(this.toggle0 == true) {
-                this.toggle0 = false
-            }
         },
         rechargeSelect : function() {
             this.toggleFront = true
@@ -260,6 +258,7 @@ new Vue({
             this.toggleFramework = true
             this.toggleOutil = true
             this.toggleServeur = true
+            this.toggleBDD = true
         }
     },
     computed: {

@@ -572,7 +572,7 @@
 					<p class="titre">IIS</p>
 				</div>
 				<!-- BDD -->
-				<div class="point_container" id="mySQL" :style="mySQL" v-on:click="toggle29 = !toggle29" :class="{selectNoneServeur : !toggleServeur}">
+				<div class="point_container" id="mySQL" :style="mySQL" v-on:click="toggle29 = !toggle29" :class="{selectNoneBDD : !toggleBDD}">
 					<div class="infos_bulle_container" :class="{open : toggle29}" >
 						<div class="infos_bulle" >
 							<h3 class="titre_info">{{printInfo(29,0)}}</h3>
@@ -590,7 +590,7 @@
 					<button class="button_point"></button>
 					<p class="titre">mySQL</p>
 				</div>
-				<div class="point_container" id="mongodb" :style="mongodb" v-on:click="toggle30 = !toggle30" :class="{selectNoneServeur : !toggleServeur}">
+				<div class="point_container" id="mongodb" :style="mongodb" v-on:click="toggle30 = !toggle30" :class="{selectNoneBDD : !toggleBDD}">
 					<div class="infos_bulle_container" :class="{open : toggle30}" >
 						<div class="infos_bulle" >
 							<h3 class="titre_info">{{printInfo(30,0)}}</h3>
@@ -608,7 +608,7 @@
 					<button class="button_point"></button>
 					<p class="titre">MongoDB</p>
 				</div>
-				<div class="point_container" id="SQLServer" :style="SQLServer" v-on:click="toggle31 = !toggle31" :class="{selectNoneServeur : !toggleServeur}">
+				<div class="point_container" id="SQLServer" :style="SQLServer" v-on:click="toggle31 = !toggle31" :class="{selectNoneBDD : !toggleBDD}">
 					<div class="infos_bulle_container" :class="{open : toggle31}" >
 						<div class="infos_bulle" >
 							<h3 class="titre_info">{{printInfo(31,0)}}</h3>
@@ -626,7 +626,7 @@
 					<button class="button_point"></button>
 					<p class="titre">SQLServer</p>
 				</div>
-				<div class="point_container" id="postgreSQL" :style="postgreSQL" v-on:click="toggle32 = !toggle32" :class="{selectNoneServeur : !toggleServeur}">
+				<div class="point_container" id="postgreSQL" :style="postgreSQL" v-on:click="toggle32 = !toggle32" :class="{selectNoneBDD : !toggleBDD}">
 					<div class="infos_bulle_container" :class="{open : toggle32}" >
 						<div class="infos_bulle" >
 							<h3 class="titre_info">{{printInfo(32,0)}}</h3>
@@ -644,7 +644,7 @@
 					<button class="button_point"></button>
 					<p class="titre">PostgreSQL</p>
 				</div>
-				<div class="point_container" id="oracle" :style="oracle" v-on:click="toggle33 = !toggle33" :class="{selectNoneServeur : !toggleServeur}">
+				<div class="point_container" id="oracle" :style="oracle" v-on:click="toggle33 = !toggle33" :class="{selectNoneBDD : !toggleBDD}">
 					<div class="infos_bulle_container" :class="{open : toggle33}" >
 						<div class="infos_bulle" >
 							<h3 class="titre_info">{{printInfo(33,0)}}</h3>
@@ -812,6 +812,9 @@
 				</button>
 				<button id="select_serveur" class="selecteur" v-on:click="toggleServeur = !toggleServeur" :class="{selectCheck : toggleServeur}">
 					Serveur
+				</button>
+				<button id="select_BDD" class="selecteur" v-on:click="toggleBDD = !toggleBDD" :class="{selectCheck : toggleBDD}">
+					BDD
 				</button>
 				<button id="select_recharge" class="selecteur_recharge" v-on:click="rechargeSelect">
 					<img src="./view/ressources/rechargeSelecteur.svg" alt="">
