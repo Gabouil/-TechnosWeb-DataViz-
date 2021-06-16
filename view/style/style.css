@@ -169,7 +169,7 @@ main {
 
 .point_container {
     position: absolute;
-    transition: 1s;
+    transition: 1s bottom, 1s left;
     display: none !important;
     flex-direction: column;
     align-items: center;

@@ -266,7 +266,9 @@ new Vue({
         // front
         css : function(){
             if(this.bottom[0] == 0) {
-                return false;
+                return {
+                    visibility : 'hidden',
+                }
             }else if(this.timeBar == 4) {
                 return {
                     display : "flex",
@@ -283,7 +285,9 @@ new Vue({
         },
         c : function(){
             if(this.bottom[1] == 0) {
-                return false;
+                return {
+                    visibility : 'hidden',
+                }
             }else if(this.timeBar == 4) {
                 return {
                     display : "flex",
@@ -300,7 +304,9 @@ new Vue({
         },
         cpp : function(){
             if(this.bottom[2] == 0) {
-                return false;
+                return {
+                    visibility : 'hidden',
+                }
             }else {
                 return {
                     display : "flex",
@@ -312,7 +318,9 @@ new Vue({
         // back
         python : function(){
             if(this.bottom[3] == 0) {
-                return false;
+                return {
+                    visibility : 'hidden',
+                }
             }else if(this.timeBar == 4) {
                 return {
                     display : "flex",
@@ -329,7 +337,9 @@ new Vue({
         },
         php : function(){
             if(this.bottom[4] == 0) {
-                return false;
+                return {
+                    visibility : 'hidden',
+                }
             }else if(this.timeBar == 1) {
                 return {
                     display : "flex",
@@ -346,7 +356,9 @@ new Vue({
         },
         java : function(){
             if(this.bottom[5] == 0) {
-                return false;
+                return {
+                    visibility : 'hidden',
+                }
             }else if(this.timeBar == 1) {
                 return {
                     display : "flex",
@@ -375,7 +387,9 @@ new Vue({
         },
         ruby : function(){
             if(this.bottom[6] == 0) {
-                return false;
+                return {
+                    visibility : 'hidden',
+                }
             }else {
                 return {
                     display : "flex",
@@ -386,7 +400,9 @@ new Vue({
         },
         sql : function(){
             if(this.bottom[7] == 0) {
-                return false;
+                return {
+                    visibility : 'hidden',
+                }
             }else if(this.timeBar == 1) {
                 return {
                     display : "flex",
@@ -403,7 +419,9 @@ new Vue({
         },
         csh : function(){
             if(this.bottom[8] == 0) {
-                return false;
+                return {
+                    visibility : 'hidden',
+                }
             }else {
                 return {
                     display : "flex",
@@ -416,7 +434,9 @@ new Vue({
         // front/back
         javaScript : function(){
             if(this.bottom[9] == 0) {
-                return false;
+                return {
+                    visibility : 'hidden',
+                }
             }else if(this.timeBar == 1) {
                 return {
                     display : "flex",
@@ -433,7 +453,9 @@ new Vue({
         },
         typeScript : function(){
             if(this.bottom[10] == 0) {
-                return false;
+                return {
+                    visibility : 'hidden',
+                }
             }else if(this.timeBar == 3) {
                 return {
                     display : "flex",
@@ -450,7 +472,9 @@ new Vue({
         },
         objectc : function(){
             if(this.bottom[11] == 0) {
-                return false;
+                return {
+                    visibility : 'hidden',
+                }
             }else {
                 return {
                     display : "flex",
@@ -461,7 +485,9 @@ new Vue({
         },
         kotlin : function(){
             if(this.bottom[12] == 0) {
-                return false;
+                return {
+                    visibility : 'hidden',
+                }
             }else {
                 return {
                     display : "flex",
@@ -474,7 +500,9 @@ new Vue({
         // Front
         reactjs : function() {
             if(this.bottom[13] == 0) {
-                return false;
+                return {
+                    visibility : 'hidden',
+                }
             }else {
                 return {
                     display : "flex",
@@ -485,7 +513,9 @@ new Vue({
         },
         reactNatif : function(){
             if(this.bottom[14] == 0) {
-                return false;
+                return {
+                    visibility : 'hidden',
+                }
             }else {
                 return {
                     display : "flex",
@@ -496,7 +526,9 @@ new Vue({
         },
         angularJS : function(){
             if(this.bottom[15] == 0) {
-                return false;
+                return {
+                    visibility : 'hidden',
+                }
             }else {
                 return {
                     display : "flex",
@@ -507,7 +539,9 @@ new Vue({
         },
         angular : function(){
             if(this.bottom[16] == 0) {
-                return false;
+                return {
+                    visibility : 'hidden',
+                }
             }else {
                 return {
                     display : "flex",
@@ -518,7 +552,9 @@ new Vue({
         },
         vue : function(){
             if(this.bottom[17] == 0) {
-                return false;
+                return {
+                    visibility : 'hidden',
+                }
             }else {
                 return {
                     display : "flex",
@@ -529,7 +565,9 @@ new Vue({
         },
         bootstrap : function(){
             if(this.bottom[18] == 0) {
-                return false;
+                return {
+                    visibility : 'hidden',
+                }
             }else if(this.timeBar == 4) {
                 return {
                     display : "flex",
@@ -546,7 +584,9 @@ new Vue({
         },
         tailwind : function(){
             if(this.bottom[19] == 0) {
-                return false;
+                return {
+                    visibility : 'hidden',
+                }
             }else {
                 return {
                     display : "flex",
@@ -558,7 +598,9 @@ new Vue({
         // back
         laravel : function(){
             if(this.bottom[20] == 0) {
-                return false;
+                return {
+                    visibility : 'hidden',
+                }
             }else {
                 return {
                     display : "flex",
@@ -569,7 +611,9 @@ new Vue({
         },
         symphony : function(){
             if(this.bottom[21] == 0) {
-                return false;
+                return {
+                    visibility : 'hidden',
+                }
             }else if(this.timeBar == 2) {
                 return {
                     display : "flex",
@@ -586,7 +630,9 @@ new Vue({
         },
         rails : function(){
             if(this.bottom[22] == 0) {
-                return false;
+                return {
+                    visibility : 'hidden',
+                }
             }else {
                 return {
                     display : "flex",
@@ -597,7 +643,9 @@ new Vue({
         },
         django : function(){
             if(this.bottom[23] == 0) {
-                return false;
+                return {
+                    visibility : 'hidden',
+                }
             }else {
                 return {
                     display : "flex",
@@ -608,7 +656,9 @@ new Vue({
         },
         cakePHP : function(){
             if(this.bottom[24] == 0) {
-                return false;
+                return {
+                    visibility : 'hidden',
+                }
             }else {
                 return {
                     display : "flex",
@@ -620,7 +670,9 @@ new Vue({
         // front/back
         net : function(){
             if(this.bottom[25] == 0) {
-                return false;
+                return {
+                    visibility : 'hidden',
+                }
             }else {
                 return {
                     display : "flex",
@@ -632,7 +684,9 @@ new Vue({
         // serveur
         apache : function(){
             if(this.bottom[26] == 0) {
-                return false;
+                return {
+                    visibility : 'hidden',
+                }
             }else {
                 return {
                     display : "flex",
@@ -643,7 +697,9 @@ new Vue({
         },
         nginx : function(){
             if(this.bottom[27] == 0) {
-                return false;
+                return {
+                    visibility : 'hidden',
+                }
             }else {
                 return {
                     display : "flex",
@@ -654,7 +710,9 @@ new Vue({
         },
         iis : function(){
             if(this.bottom[28] == 0) {
-                return false;
+                return {
+                    visibility : 'hidden',
+                }
             }else {
                 return {
                     display : "flex",
@@ -666,7 +724,9 @@ new Vue({
         // BDD
         mySQL : function(){
             if(this.bottom[29] == 0) {
-                return false;
+                return {
+                    visibility : 'hidden',
+                }
             }else {
                 return {
                     display : "flex",
@@ -677,7 +737,9 @@ new Vue({
         },
         mongodb : function(){
             if(this.bottom[30] == 0) {
-                return false;
+                return {
+                    visibility : 'hidden',
+                }
             }else {
                 return {
                     display : "flex",
@@ -688,7 +750,9 @@ new Vue({
         },
         SQLServer : function(){
             if(this.bottom[31] == 0) {
-                return false;
+                return {
+                    visibility : 'hidden',
+                }
             }else {
                 return {
                     display : "flex",
@@ -699,7 +763,9 @@ new Vue({
         },
         postgreSQL : function(){
             if(this.bottom[32] == 0) {
-                return false;
+                return {
+                    visibility : 'hidden',
+                }
             }else {
                 return {
                     display : "flex",
@@ -710,7 +776,9 @@ new Vue({
         },
         oracle : function(){
             if(this.bottom[33] == 0) {
-                return false;
+                return {
+                    visibility : 'hidden',
+                }
             }else {
                 return {
                     display : "flex",
@@ -722,7 +790,9 @@ new Vue({
         // outils
         adobeFlash : function(){
             if(this.bottom[34] == 0) {
-                return false;
+                return {
+                    visibility : 'hidden',
+                }
             }else if(this.timeBar == 2) {
                 return {
                     display : "flex",
@@ -739,7 +809,9 @@ new Vue({
         },
         wordpress : function(){
             if(this.bottom[35] == 0) {
-                return false;
+                return {
+                    visibility : 'hidden',
+                }
             }else {
                 return {
                     display : "flex",
@@ -750,7 +822,9 @@ new Vue({
         },
         shopify : function(){
             if(this.bottom[36] == 0) {
-                return false;
+                return {
+                    visibility : 'hidden',
+                }
             }else {
                 return {
                     display : "flex",
@@ -761,7 +835,9 @@ new Vue({
         },
         joomla : function(){
             if(this.bottom[37] == 0) {
-                return false;
+                return {
+                    visibility : 'hidden',
+                }
             }else {
                 return {
                     display : "flex",
@@ -772,7 +848,9 @@ new Vue({
         },
         nodejs : function(){
             if(this.bottom[38] == 0) {
-                return false;
+                return {
+                    visibility : 'hidden',
+                }
             }else {
                 return {
                     display : "flex",
@@ -783,7 +861,9 @@ new Vue({
         },
         lowCode : function(){
             if(this.bottom[39] == 0) {
-                return false;
+                return {
+                    visibility : 'hidden',
+                }
             }else {
                 return {
                     display : "flex",
@@ -794,7 +874,9 @@ new Vue({
         },
         git : function(){
             if(this.bottom[40] == 0) {
-                return false;
+                return {
+                    visibility : 'hidden',
+                }
             }else {
                 return {
                     display : "flex",
