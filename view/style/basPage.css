@@ -1,217 +1,250 @@
-/* Container */
-.infosScroll {
-    font-size: 1em;
-    margin: 150px 20%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    row-gap: 150px;
-    align-content: center;
-}
-/* texts */
-.infosScroll section {
-    font-size: 4em;
-    margin-bottom: 100px;
-    margin-top: 100px;
-}
-.infosScroll h1 {
-    font-size: 3em;
-    font-weight:400;
-    text-align: center;
-    margin-bottom: 10px;
-    position: relative;
 
-}
-.infosScroll p {
-    font-size: 1em;
-    font-weight:normal;
-    text-align: center;
-    padding-left: 5%;
-}
-.infosScroll span {
-    display: block;
-    width: 200px;
-    font-weight:normal;
-    text-align: right;
-}
+/* ----------------------------------------------------- Media Responsive ----------------------------------------------------- */
+@media screen and ( min-width: 440px) {
+        /* Container */
+    .infosScroll {
+        font-size: 1em;
+        margin: 150px 20%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        row-gap: 150px;
+        align-content: center;
+    }
+    /* texts */
+    .infosScroll section {
+        font-size: 4em;
+        margin-bottom: 100px;
+        margin-top: 100px;
+    }
+    .infosScroll h1 {
+        font-size: 3em;
+        font-weight:400;
+        text-align: center;
+        margin-bottom: 10px;
+        position: relative;
 
-/* Marqueur jaune */
-.infosScroll section em {
-    background-color: rgb(238, 238, 153);
-}
-/* sous lignement */
-.infosScroll .line:after {
-    display: block;
-      content: '';
-     width: 50%;
-     height: 1px;
-     background: black;
-     position: absolute;
-     bottom: 8%;
-     left: 25%;
-     transform: rotate(-2deg);
-   }
-/* Graphique Pie */
-#sectionPie {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-#fichePie {
-    position: relative;
-    width: 1000px;
-    top: 0;
-    left: -380px;
-    z-index:-1
-}
-#piechart {
-    position: absolute;
-    transform: rotate(-60deg);
-    height: 450px;
-    border-bottom: 100px;
-    bottom: 23vh;
-    left: -200px
-}
-/* Labels */
-#pielabel1 {
-    color: white;
-    position: absolute;
-    top: 20vh;
-    left: 60px
-}
-#pielabel2 {
-    color: white;
-    position: absolute;
-    top: 25vh;
-    left: 200px
-}
-#pielabel3 {
-    color: white;
-    position: absolute;
-    top: 30vh;
-    left: 200px
-}
-#pielabel4 {
-    color: white;
-    position: absolute;
-    top: 40vh;
-    left: 60px
-}
-/* Message de détail */
-#detail1 {
-    display: inline-block;
-    position: relative;
-    z-index: 10;
-    bottom: 40vh;
-    right: -55%;
-    text-align: right;
-    align-self: center;
-    width: 450px;
+    }
+    .infosScroll p {
+        font-size: 1em;
+        font-weight:normal;
+        text-align: center;
+        padding-left: 5%;
+    }
+    .infosScroll span {
+        display: block;
+        width: 200px;
+        font-weight:normal;
+        text-align: right;
+    }
 
-}
-#Franke {
-    position: absolute;
-    bottom: 35vh;
-    right: -10%;
-}
-/*  Rect */
-#flexrect {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    row-gap: 10px;
-}
-#rect1 {
-    position: relative;
-    height: 50px;
-    width: 1000px;
-    background-color: #1E1E1E;
-    color: white;
-    padding-left: 10px ;
-    padding-top: 5px ;
-    margin-left: 60px;
-    margin-top: 100px
-}
-#rect1::after {
-    content: "32%";
-    position: absolute;
-    left:102%;
-    top: 5px;
-    z-index: 1000;
-    color: #1E1E1E;
-}
-#rect2 {
-    position: relative;
-    height: 50px;
-    width: 750px;
-    background-color: #1E1E1E;
-    color: white;
-    padding-left: 10px ;
-    padding-top: 5px ;
-    margin-left: 60px;
-}
-#rect2::after {
-    content: "25%";
-    position: absolute;
-    left:102%;
-    top: 5px;
-    color: #1E1E1E;
-}
-#rect3 {
-    position: relative;
-    height: 50px;
-    width: 600px;
-    background-color: #1E1E1E;
-    color: white;
-    padding-left: 10px ;
-    padding-top: 5px ;
-    margin-left: 60px;
-}
-#rect3::after {
-    content: "20%";
-    position: absolute;
-    left:102%;
-    top: 5px;
-    color: #1E1E1E;
-}
-#rect4 {
-    position: relative;
-    height: 50px;
-    width: 400px;
-    background-color: #1E1E1E;
-    color: white;
-    padding-left: 10px ;
-    padding-top: 5px ;
-    margin-bottom: 50px;
-    margin-left: 60px;
-}
-#rect4::after {
-    content: "13%";
-    position: absolute;
-    left:102%;
-    top: 5px;
-    color: #1E1E1E;
-}
-/* Lien */
-a.return {
-    font-size: 4em;
-    color: #1E1E1E;
-    border: 1px #1E1E1E solid;
-    width: fit-content;
-    padding: 2px 5px;
-    align-self: center;
-    margin-top: 100px;
-}
+    /* Marqueur jaune */
+    .infosScroll section em {
+        background-color: rgb(238, 238, 153);
+    }
+    /* sous lignement */
+    .infosScroll .line:after {
+        display: block;
+        content: '';
+        width: 50%;
+        height: 1px;
+        background: black;
+        position: absolute;
+        bottom: 8%;
+        left: 25%;
+        transform: rotate(-2deg);
+    }
+    /* ---------------------------------- Les Sections ---------------------------------- */
+    /* Graphique Pie */
+    #sectionPie {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    #fichePie {
+        position: relative;
+        width: 1000px;
+        top: 0;
+        left: -380px;
+        z-index:-1
+    }
+    #piechart {
+        position: absolute;
+        transform: rotate(0deg);
+        height: 550px;
+        border-bottom: 100px;
+        top: -100px;
+        left: -260px
+    }
+    #piechartresp {
+        display:none
+    }
+    /* Labels */
+    #pielabel1 {
+        color: white;
+        position: absolute;
+        top: 20vh;
+        left: 60px
+    }
+    #pielabel2 {
+        color: white;
+        position: absolute;
+        top: 25vh;
+        left: 200px
+    }
+    #pielabel3 {
+        color: white;
+        position: absolute;
+        top: 30vh;
+        left: 200px
+    }
+    #pielabel4 {
+        color: white;
+        position: absolute;
+        top: 40vh;
+        left: 60px
+    }
+    /* Message de détail */
+    #detail1 {
+        display: inline-block;
+        position: relative;
+        z-index: 10;
+        top:100px;
+        right: -55%;
+        text-align: left;
+        align-self: center;
+        width: 450px;
 
+    }
+    #Franke {
+        position: absolute;
+        top:170px;
+        right: -10%;
+    }
+    
+    /*  Rect */
+    #flexrect {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        row-gap: 10px;
+        top:400px;
+    }
+    #rect1 {
+        position: relative;
+        height: 50px;
+        width: 1000px;
+        background-color: #1E1E1E;
+        color: white;
+        padding-left: 10px ;
+        padding-top: 5px ;
+        margin-left: 60px;
+        margin-top: 100px
+    }
+    #rect1::after {
+        content: "32%";
+        position: absolute;
+        left:102%;
+        top: 5px;
+        z-index: 1000;
+        color: #1E1E1E;
+    }
+    #rect2 {
+        position: relative;
+        height: 50px;
+        width: 750px;
+        background-color: #1E1E1E;
+        color: white;
+        padding-left: 10px ;
+        padding-top: 5px ;
+        margin-left: 60px;
+    }
+    #rect2::after {
+        content: "25%";
+        position: absolute;
+        left:102%;
+        top: 5px;
+        color: #1E1E1E;
+    }
+    #rect3 {
+        position: relative;
+        height: 50px;
+        width: 600px;
+        background-color: #1E1E1E;
+        color: white;
+        padding-left: 10px ;
+        padding-top: 5px ;
+        margin-left: 60px;
+    }
+    #rect3::after {
+        content: "20%";
+        position: absolute;
+        left:102%;
+        top: 5px;
+        color: #1E1E1E;
+    }
+    #rect4 {
+        position: relative;
+        height: 50px;
+        width: 400px;
+        background-color: #1E1E1E;
+        color: white;
+        padding-left: 10px ;
+        padding-top: 5px ;
+        margin-bottom: 50px;
+        margin-left: 60px;
+    }
+    #rect4::after {
+        content: "13%";
+        position: absolute;
+        left:102%;
+        top: 5px;
+        color: #1E1E1E;
+    }
+    .diagtext {
+        display: block;
+        position: absolute;
+        top: 400px;
+        padding: 0 50px;
+        left: -52px;
+        text-align: left!important;
+    }
+    #section74 {
+        position: relative;
+        height: 100px;
+        top: 300px;
+    }
+    /* Lien */
+    .sectionlien {
+        position:relative;
+        top: 0px;
+        margin: 0px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+    }
+    .return {
+        position: absolute;
+        font-size: 1em;
+        color: #1E1E1E;
+        border: 1px #1E1E1E solid;
+        margin: 50px 0px;
+        top: 300px;
+    }
+}
+/* ----------------------------------------------------- Media Responsive ----------------------------------------------------- */
 @media screen and ( max-width: 440px) {
     /* Container */
     .infosScroll {
+        display: block;
         font-size: 1em;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         align-content: center;
+        line-height: 0.7;
     }
     /* texts */
     .infosScroll section {
@@ -219,7 +252,7 @@ a.return {
     }
     #section24M {
         position: relative;
-        top: 50px;
+        top: 100px;
         width:100%;
         height: 100px;
         margin: 10% 10%;
@@ -288,6 +321,7 @@ a.return {
         flex-wrap: wrap;
         flex-direction: row;
         height: 400px;
+        top: 50px;
     }
     #fichePie {
         display: none;
@@ -304,6 +338,7 @@ a.return {
     #section74 {
         position: relative;
         height: 100px;
+        top: 100px;
     }
     .titre74 {
         position: absolute;
@@ -344,17 +379,18 @@ a.return {
         flex-direction: column;
         flex-wrap: wrap;
         row-gap: 10px;
+        top: 50px;
     }
     #diagramme {
         position: absolute;
-        top: 100px;
+        top: 200px;
         width: 280px;
         align-self: center;
     }
     .diagtext {
         display: block;
         position: absolute;
-        top: 220px;
+        top: 310px;
         padding: 0 50px;
         left: 7px;
         text-align: left!important;
@@ -362,9 +398,9 @@ a.return {
     /* Lien */
     .sectionlien {
         position:relative;
-        top: 300px;
+        top: 500px;
         margin: 0px;
-        height: 100px;
+        height: 150px;
         display: flex;
         justify-content: center;
     }
@@ -434,7 +470,7 @@ a.return {
     /* Par sections */
     .section63 {
         position: relative;
-        top: 50px;
+        top: 100px;
         width:100%;
         height: 300px;
         margin: 10% 10%;
@@ -456,7 +492,7 @@ a.return {
 
     .section7M {
         position: relative;
-        top: -100px;
+        top: 0px;
         width:100%;
         height: 300px;
         margin: 10% 10%;
@@ -476,7 +512,7 @@ a.return {
     }
     .section69 {
         position: relative;
-        top: -200px;
+        top: -100px;
         width:100%;
         height: 300px;
         margin: 10% 10%;
@@ -497,7 +533,7 @@ a.return {
     .sectionCourbe {
         position:relative;
         height: 400px;
-        top: -50px;
+        top: 0px;
     }
     #graph2012resp {
         width:70%;
@@ -521,7 +557,7 @@ a.return {
         color: #1E1E1E;
         border: 1px #1E1E1E solid;
         margin-top: 0px;
-        top: 20px;
+        top: 130px;
     }
     /* ------------------ On passe à 2017 ------------------ */
     .infosScroll3 {
@@ -567,12 +603,12 @@ a.return {
     .infosScroll3 .line:after {
         display: block;
         content: '';
-        width: 25%;
+        width: 60%;
         height: 1px;
         background: black;
         position: absolute;
         bottom: 8%;
-        left: 38%;
+        left: 20%;
         transform: rotate(-2deg);
     }
 
@@ -581,7 +617,7 @@ a.return {
     .section2017_1 {
         position:relative;
         height: 800px;
-        top: 0px;
+        top: 50px;
     }
     #graph2017_1Resp {
         display: block;
@@ -589,14 +625,14 @@ a.return {
         height:100%;
         position:absolute;
         padding:50px;
-        left: 15px;
+        left: 48px;
     }
     #graph2017_1 {
         display: none;
     }
     .section119 {
         position: relative;
-        top: -50px;
+        top: 50px;
         width:100%;
         height: 300px;
         margin: 10% 10%;
@@ -624,7 +660,7 @@ a.return {
         display: block;
         height:100%;
         position:absolute;
-        left:45px;
+        left:90px;
 
     }
     #graph2017_2 {
@@ -632,14 +668,14 @@ a.return {
     }
     .section44 {
         position: relative;
-        top: 50px;
+        top: 100px;
         width:100%;
         height: 300px;
         margin: 10% 10%;
     }
     .titre44 {
         position: absolute;
-        top: 100px;
+        top: 0px;
         font-weight: 700px;
     }
     .text44 {
@@ -654,7 +690,7 @@ a.return {
     .section2017_3 {
         position:relative;
         height: 400px;
-        top: -150px;
+        top: -100px;
     }
     #graph2017_3Resp {
         display: block;
@@ -669,9 +705,9 @@ a.return {
     }
     .sectionlien3 {
         position:relative;
-        top: -300px;
+        top:-250px;
         margin: 0px;
-        height: 50px;
+        height: 100px;
         display: flex;
         justify-content: center;
     }
