@@ -206,7 +206,7 @@
 					<p class="titre">C#</p>
 				</div>
 				<!-- front/back -->
-				<div class="point_container" id="javaScript" :style="javaScript" v-on:click="toggle9 = !toggle9" :class="{selectNoneFront : !toggleFront, selectNoneBack : !toggleBack, selectNoneFrontBack : !toggleFrontBack, selectNoneLangage : !toggleLangage}">
+				<div class="point_container" id="javaScript" :style="javaScript" v-on:click="toggle9 = !toggle9" :class="{selectNoneFront : !toggleFront, selectNoneLangage : !toggleLangage}">
 					<div class="infos_bulle_container" :class="{open : toggle9}" >
 						<div class="infos_bulle" >
 							<h3 class="titre_info">{{printInfo(9,0)}}</h3>
@@ -224,7 +224,7 @@
 					<button class="button_point"></button>
 					<p class="titre">JavaScript</p>
 				</div>
-				<div class="point_container" id="typescript" :style="typeScript" v-on:click="toggle10 = !toggle10" :class="{selectNoneFront : !toggleFront, selectNoneBack : !toggleBack, selectNoneFrontBack : !toggleFrontBack, selectNoneLangage : !toggleLangage}">
+				<div class="point_container" id="typescript" :style="typeScript" v-on:click="toggle10 = !toggle10" :class="{selectNoneFront : !toggleFront, selectNoneLangage : !toggleLangage}">
 					<div class="infos_bulle_container" :class="{open : toggle10}" >
 						<div class="infos_bulle" >
 							<h3 class="titre_info">{{printInfo(10,0)}}</h3>
@@ -242,7 +242,7 @@
 					<button class="button_point"></button>
 					<p class="titre">Type Script</p>
 				</div>
-				<div class="point_container" id="objectc" :style="objectc" v-on:click="toggle11 = !toggle11" :class="{selectNoneFront : !toggleFront, selectNoneBack : !toggleBack, selectNoneFrontBack : !toggleFrontBack, selectNoneLangage : !toggleLangage}">
+				<div class="point_container" id="objectc" :style="objectc" v-on:click="toggle11 = !toggle11" :class="{selectNoneFront : !toggleFront, selectNoneLangage : !toggleLangage}">
 					<div class="infos_bulle_container" :class="{open : toggle11}" >
 						<div class="infos_bulle" >
 							<h3 class="titre_info">{{printInfo(11,0)}}</h3>
@@ -260,7 +260,7 @@
 					<button class="button_point"></button>
 					<p class="titre">objective-c</p>
 				</div>
-				<div class="point_container" id="kotlin" :style="kotlin" v-on:click="toggle12 = !toggle12" :class="{selectNoneFront : !toggleFront, selectNoneBack : !toggleBack, selectNoneFrontBack : !toggleFrontBack, selectNoneLangage : !toggleLangage}">
+				<div class="point_container" id="kotlin" :style="kotlin" v-on:click="toggle12 = !toggle12" :class="{selectNoneFront : !toggleFront, selectNoneLangage : !toggleLangage}">
 					<div class="infos_bulle_container" :class="{open : toggle12}" >
 						<div class="infos_bulle" >
 							<h3 class="titre_info">{{printInfo(12,0)}}</h3>
@@ -498,7 +498,7 @@
 					<p class="titre">CakePHP</p>
 				</div>
 				<!-- front/back -->
-				<div class="point_container" id="net" :style="net" v-on:click="toggle25 = !toggle25" :class="{selectNoneFront : !toggleFront, selectNoneBack : !toggleBack, selectNoneFrontBack : !toggleFrontBack, selectNoneFramework : !toggleFramework}">
+				<div class="point_container" id="net" :style="net" v-on:click="toggle25 = !toggle25" :class="{selectNoneFront : !toggleFront, selectNoneFramework : !toggleFramework}">
 					<div class="infos_bulle_container" :class="{open : toggle25}" >
 						<div class="infos_bulle" >
 							<h3 class="titre_info">{{printInfo(25,0)}}</h3>
@@ -797,9 +797,6 @@
 				</button>
 				<button id="select_back" class="selecteur" v-on:click="toggleBack = !toggleBack" :class="{selectCheck : toggleBack}">
 					Back-end
-				</button>
-				<button id="select_front_back" class="selecteur" v-on:click="toggleFrontBack = !toggleFrontBack" :class="{selectCheck : toggleFrontBack}">
-					Front & Back
 				</button>
 				<button id="select_langage" class="selecteur" v-on:click="toggleLangage = !toggleLangage" :class="{selectCheck : toggleLangage}">
 					Langage
