@@ -7,6 +7,7 @@
 	<title>Trois 2V</title>
 	<!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="./view/style/style.css">
+    <link rel="stylesheet" href="./view/style/basPage.css">
 </head>
 <body>
 	<section id="mon_app">
@@ -14,9 +15,9 @@
 			<div id="cursor"></div>
 		</div>
 		<header>
-			<!-- <div id="button_night">
+			<div id="button_night">
 				<img src="./view/ressources/night.png" alt="">
-			</div> -->
+			</div>
 		</header>
 		<main class="page_container">
 			<div class="titre_container">
@@ -820,7 +821,7 @@
 				</div>
 			</div>
 			<div class="bar_container">
-				<input v-model="timeBar" type="range" id="time_bar" @change="fetchData(); chargeInfo()" name="time" min="1" max="4">
+				<input v-model="timeBar" type="range" id="time_bar" @change="fetchData(); chargeInfo(); printPage()" name="time" min="1" max="4">
 				<div class="marckers_line">
 					<div class="marcker_line">
 						<span class="bar_2004"></span>
@@ -844,6 +845,9 @@
 				<img src="./view/ressources/plusInfos.svg" alt="">
 			</div>
 		</main>
+		<div class="main_page" v-html='mainPage'>
+			{{mainPage}}
+		</div>
 	</section>
 	<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <script src="./view/script/vueApp.js"></script>

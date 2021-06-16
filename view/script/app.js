@@ -1,29 +1,28 @@
 const cursor = document.getElementById("cursor")
 const night = document.querySelector(".nuit")
 const buttonNight = document.getElementById("button_night")
-// var nightOn = false
+var nightOn = false
 const legende = document.getElementById("legende")
 var legendeOn = false
 const timeBar = document.getElementById("time_bar")
 
-// var ourResquest = new XMLHttpRequest()
-// ourResquest.open('GET', "https://datavisual1.000webhostapp.com/api_test/api/info/lecture.php")
-// ourResquest.onload = function() {
-//     var ourData = JSON.parse(ourResquest.responseText)
-//     ourData = ourData['data']
-//     console.log(ourData[0])
-// }
-// ourResquest.send()
+var ourResquest = new XMLHttpRequest()
+ourResquest.open('GET', "https://datavisual1.000webhostapp.com/api_test/api/info/lecture.php")
+ourResquest.onload = function() {
+    var ourData = JSON.parse(ourResquest.responseText)
+    ourData = ourData['data']
+}
+ourResquest.send()
 
-// buttonNight.addEventListener('click', function(){
-//     if(nightOn == false) {
-//         nightOn = true
-//         night.setAttribute('style', 'display: block;')
-//     } else {
-//         nightOn = false
-//         night.setAttribute('style', 'display: none;')
-//     }
-// })
+buttonNight.addEventListener('click', function(){
+    if(nightOn == false) {
+        nightOn = true
+        night.setAttribute('style', 'display: block;')
+    } else {
+        nightOn = false
+        night.setAttribute('style', 'display: none;')
+    }
+})
 
 document.addEventListener('mousemove', e => {
     cursor.setAttribute('style', 'top:'+(e.clientY)+"px; left:"+(e.clientX)+"px;")

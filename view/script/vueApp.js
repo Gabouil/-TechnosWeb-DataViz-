@@ -13,7 +13,6 @@ new Vue({
         infos : [],
         info : [],
 
-
         toggle0  : false,
         toggle1  : false,
         toggle2  : false,
@@ -69,10 +68,14 @@ new Vue({
         toggleServeur : false,
         toggleBDD : false,
 
+        // main page
+        mainPage : "",
+
     },
     created() {
-        this.fetchData();
+        this.fetchData()
         this.chargeInfo()
+        this.printPage()
     },
     methods: {
         fetchData : function() {
@@ -259,7 +262,29 @@ new Vue({
             this.toggleOutil = false
             this.toggleServeur = false
             this.toggleBDD = false
+        },
+        printPage : function() {
+            var ourResquest = new XMLHttpRequest()
+            ourResquest.open('GET', "https://datavisual1.000webhostapp.com/api_test/api/info/lecturev2.php")
+            ourResquest.onload = () => {
+                var ourData = JSON.parse(ourResquest.responseText)
+                ourData = ourData['data']
+                if(this.timeBar == 1) {
+                    this.mainPage = ourData[0]['codeBrut']
+                }
+                if(this.timeBar == 2) {
+                    this.mainPage = ourData[1]['codeBrut']
+                }
+                if(this.timeBar == 3) {
+                    this.mainPage = ourData[2]['codeBrut']
+                }
+                if(this.timeBar == 4) {
+                    this.mainPage = ourData[3]['codeBrut']
+                }
+            },
+            ourResquest.send()
         }
+
     },
     computed: {
         // langage
