@@ -1,5 +1,7 @@
 # Evolution des technologies web
 
+Darkmode only
+
 Bienvenue sur le README du projet de datavizualisaton du Groupe 11.
 
 # L'équipe :
