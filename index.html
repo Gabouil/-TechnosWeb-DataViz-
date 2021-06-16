@@ -792,30 +792,32 @@
 			</div>
 			<img id="legende" src="./view/ressources/legende.svg" alt="">
 			<div class="selecteur_container">
-				<button id="select_front" class="selecteur" v-on:click="toggleFront = !toggleFront" :class="{selectCheck : toggleFront}">
-					Front-end
-				</button>
-				<button id="select_back" class="selecteur" v-on:click="toggleBack = !toggleBack" :class="{selectCheck : toggleBack}">
-					Back-end
-				</button>
-				<button id="select_langage" class="selecteur" v-on:click="toggleLangage = !toggleLangage" :class="{selectCheck : toggleLangage}">
-					Langage
-				</button>
-				<button id="select_framework" class="selecteur" v-on:click="toggleFramework = !toggleFramework" :class="{selectCheck : toggleFramework}">
-					Framework
-				</button>
-				<button id="select_outil" class="selecteur" v-on:click="toggleOutil = !toggleOutil" :class="{selectCheck : toggleOutil}">
-					Outil
-				</button>
-				<button id="select_serveur" class="selecteur" v-on:click="toggleServeur = !toggleServeur" :class="{selectCheck : toggleServeur}">
-					Serveur
-				</button>
-				<button id="select_BDD" class="selecteur" v-on:click="toggleBDD = !toggleBDD" :class="{selectCheck : toggleBDD}">
-					BDD
-				</button>
 				<button id="select_recharge" class="selecteur_recharge" v-on:click="rechargeSelect">
 					<img src="./view/ressources/rechargeSelecteur.svg" alt="">
 				</button>
+				<div class="selecteurs">
+					<button id="select_front" class="selecteur" v-on:click="toggleFront = !toggleFront" :class="{selectCheck : toggleFront}">
+						Front-end
+					</button>
+					<button id="select_back" class="selecteur" v-on:click="toggleBack = !toggleBack" :class="{selectCheck : toggleBack}">
+						Back-end
+					</button>
+					<button id="select_langage" class="selecteur" v-on:click="toggleLangage = !toggleLangage" :class="{selectCheck : toggleLangage}">
+						Langage
+					</button>
+					<button id="select_framework" class="selecteur" v-on:click="toggleFramework = !toggleFramework" :class="{selectCheck : toggleFramework}">
+						Framework
+					</button>
+					<button id="select_outil" class="selecteur" v-on:click="toggleOutil = !toggleOutil" :class="{selectCheck : toggleOutil}">
+						Outil
+					</button>
+					<button id="select_serveur" class="selecteur" v-on:click="toggleServeur = !toggleServeur" :class="{selectCheck : toggleServeur}">
+						Serveur
+					</button>
+					<button id="select_BDD" class="selecteur" v-on:click="toggleBDD = !toggleBDD" :class="{selectCheck : toggleBDD}">
+						BDD
+					</button>
+				</div>
 			</div>
 			<div class="bar_container">
 				<input v-model="timeBar" type="range" id="time_bar" @change="fetchData(); chargeInfo()" name="time" min="1" max="4">

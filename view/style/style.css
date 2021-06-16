@@ -292,11 +292,27 @@ main {
 .selecteur_container {
     grid-area: select;
     width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.1fr;
+    grid-template-areas: 
+    "Selecteurs"
+    "Recharge"
+    ;
+    align-items: center;
+
+    
+}
+.selecteurs {
+    grid-area: Selecteurs;
+    height: 80%;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: none;
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 .selecteur {
     font-family: "typerighter";
@@ -310,9 +326,15 @@ main {
     cursor: pointer;
 }
 .selecteur_recharge {
+    justify-self: center;
+    width: 50px;
+    grid-area: Recharge;
     cursor: pointer;
     background: none;
     border: none;
+}
+.selecteur_recharge img{
+    width: 100%;
 }
 
 .selectCheck {
@@ -468,7 +490,15 @@ input[type=range]#time_bar::-ms-thumb {
         width: 100px;
     }
     .page_container {
-        grid-template-rows: 0.2fr 1fr 0.2fr 0.2fr;
+        grid-template-columns: 0.2fr 1fr 0.2fr;
+        grid-template-rows: 0.2fr 1fr 0.2fr 0.1fr 0.2fr;
+        grid-template-areas: 
+        ". titre ."
+        ". nuage ."
+        ". select ."
+        ". bar ."
+        ". plusInfo ."
+        ;
     }
     /* gestion du Quadrant */
     .nuage_container {
@@ -499,6 +529,43 @@ input[type=range]#time_bar::-ms-thumb {
         right: -60px;
         top: 50%;
         transform: translateY(-40%) rotate(90deg);
+    }
+
+    /* gestion du selecteur */
+
+    .selecteur_container {
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .selecteurs {
+        width: 210px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: start;
+    }
+    .selecteur {
+        margin-bottom: 5px;
+        margin-right: 1px;
+        margin-left: 1px;
+        font-size: 15px;
+        padding-bottom: 0px;
+        height: 20px;
+        width: 50px;
+        border-radius: 15px;
+        border: 1px solid #1E1E1E;
+        justify-content: space-between;
+    }
+    .selecteur_recharge {
+        width: 20px;
+        cursor: pointer;
+        background: none;
+        border: none;
     }
 
     /* géstion de la bare de défillement */
