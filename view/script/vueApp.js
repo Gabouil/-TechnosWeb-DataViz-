@@ -634,7 +634,7 @@ new Vue({
                 }
             }
         },
-        symphony : function(){
+        symfony : function(){
             if(this.bottom[21] == 0) {
                 return {
                     visibility : 'hidden',
